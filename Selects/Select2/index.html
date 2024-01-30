@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <style>
+      .cust-select {
+        max-width: 200px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <select name="" class="cust-select" id="selct2">
+      <option>ABC</option>
+      <option>XYZ</option>
+      <option>ASD</option>
+    </select>
+    <!-- Do not use same ID for select (ID is uniq) -->
+    <select name="" class="cust-select" id="selct2">
+      <option>ABC</option>
+      <option>XYZ</option>
+      <option>ASD</option>
+    </select>
+    <select name="" class="cust-select">
+      <option>ABC</option>
+      <option>XYZ</option>
+      <option>ASD</option>
+    </select>
+    <select name="" class="cust-select">
+      <option>ABC</option>
+      <option>XYZ</option>
+      <option>ASD</option>
+    </select>
+
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+      $(".cust-select").select2();
+    </script>
+  </body>
+</html>

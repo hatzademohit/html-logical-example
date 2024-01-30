@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quarter Month Picker</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://npmcdn.com/flatpickr@4.6.13/dist/plugins/monthSelect/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.js"></script>
+  <script src="https://npmcdn.com/flatpickr@4.6.13/dist/plugins/monthSelect/index.js"></script>
+
+</head>
+
+<body>
+  <input type="text" class="report-month-picker" id="quarter-month-picker" readonly>
+    <script>
+
+    $('.report-month-picker').flatpickr({
+      mode: "range",
+      shorthandCurrentMonth: true,
+      onChange: function (selectedDates, dateStr, instance) {
+        // Use the selected date (dateStr) as needed
+        const selectedDate = instance.parseDate(dateStr, "M-Y");
+
+        // Calculate the range of three months
+        const startDate = new Date(selectedDate);
+        const endDate = new Date(selectedDate);
+        endDate.setMonth(endDate.getMonth() + 2);
+
+        // Set the range programmatically
+        instance.setDate([startDate, endDate]);
+        $('.flatpickr-monthSelect-months').find('span').removeClass('startRange inRange endRange')
+        var selectedCust  = $('.flatpickr-monthSelect-months').find('.flatpickr-monthSelect-month.selected');
+        $(selectedCust).addClass('startRange')
+        $(selectedCust).next().addClass('inRange')
+        $(selectedCust).next().next().addClass('endRange')
+        instance.close();
+      },
+      plugins: [
+        new monthSelectPlugin({
+          shorthand: true,
+          dateFormat: "M-y",
+          altFormat: "F y",
+        })
+      ],
+    })
+  </script>
+</body>
+
+</html>

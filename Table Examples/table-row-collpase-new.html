@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" >
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/fontawesome.min.css" integrity="sha512-TPigxKHbPcJHJ7ZGgdi2mjdW9XHsQsnptwE+nOUWkoviYBn0rAAt0A5y3B1WGqIHrKFItdhZRteONANT07IipA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+            
+        <style>
+            th{
+                vertical-align: top;
+            }
+            .iconSettings, tr.shown td.details-control:before, td.details-control:before {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            position: relative;
+            top: 1px;
+            display: inline-block;
+            font-family: "Glyphicons Halflings";
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            }
+
+            td.details-control {
+            cursor: pointer;
+            text-align: center;
+            }
+            td.details-control:before {
+                content: "+";
+                font-weight: 600;
+                font-size: 20px;
+                text-shadow: 0 0 0 #000000;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                bottom: 0;
+                margin: auto;
+            }
+
+            tr.shown td.details-control:before {
+                content: "−";
+                font-weight: 600;
+                font-size: 20px;
+                text-shadow: 0 0 0 #000000;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                bottom: 0;
+                margin: auto;
+            }
+
+            .table-outer tr.details-row td{
+                padding: 0 !important;
+            }
+            .table-outer tr.details-row td table tr td{
+                padding: 8px 10px !important;
+            }
+            .table{
+                table-layout: fixed;
+                border: 0 !important;
+            }
+
+        </style>
+        <link rel="stylesheet" href="css/style.css" >
+        <link href="https://www.dafontfree.net/embed/dGhhbGVpYS1yZWd1bGFyJmRhdGEvMTgvdC84Njk2OC9USEFMRUlBXy5UVEY" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+
+
+        <section class="container-fluid">
+            <div class="table-responsive tableGrayHead collapseTableBox parent-row">        
+                <table id="orderSummaryTabList" class="table table-bordered table-hover mb-0" cell-fix-row="8">
+                    <thead>
+                        <tr class="theadOne collapseParent stickyRow">
+                            <td class="text-center tableCollapseBtn parentCollapseBtn activeColBtn  click-collpase" id="parent-row-52">
+                                <button type="button" class="btn btnIcon">
+                                    <span class="tableCollapseIcon fas fa-plus"></span>
+                                </button>
+                            </td>
+                            <td colspan="5" class="text-left theadOneTitle">
+                                FY 24 Window 2 Fall Holiday Barone Fini Coupons - (Section 1)
+                            </td>
+                            <td colspan="6" class="text-left allocatedBudgetCol">Budget Allocated : $7,500.00</td>
+                            <td colspan="6" class="text-left remainingBrandCol">Remaining Budget : $6,969.62</td>
+                            <td colspan="6" class="text-left spendBudgetCol">Spend Budget : $530.38</td>
+         
+                        </tr>
+                    </thead>
+                    <tbody class="parentCollapseBox" data-hide="parent-row-52">
+                        <tr class="collapseChild1 stickyRow" id="level-52-19">
+                            <td data-count="1" class="text-center tableCollapseBtn childCollapseBtn getLevelOrders activeColBtn click-collpase" data-attribute-value="52" data-window-id="5" data-sales-hierachy-id="10" data-lookup-value-id="19" id="parent-row-52-19">
+                                <button type="button" class="btn btnIcon ">
+                                    <span class="tableCollapseIcon fas fa-plus"></span>
+                                </button>
+                            </td>
+                            <td class="checkBoxCol"></td>
+                            <td class="text-left child1ColTitle">Atlantic</td>
+                            <td colspan="2" class="text-left child1ColTitle">Tina Afonso</td>
+                            <td class="text-left child1ColTitle">RMM</td>
+                            <td colspan="6" class="text-left">Budget Allocated : $7,500.00</td>
+                            <td colspan="6" class="text-left">Remaining Budget : $6,969.62</td>
+                            <td colspan="6" class="text-left">Requested Spend : $530.38</td>
+                        </tr>    
+                        <tr class="collapseChild2 collapseHidden  afterLevel-52-19 activeParRow stickyRow" data-hide="parent-row-52-19" style="display: table-row;">
+                            <td class="text-center tableCollapseBtn subChildCollapseBtn activeColBtn click-collpase" id="parent-row-52-19-41">
+                                <button type="button" class="btn btnIcon">
+                                    <span class="tableCollapseIcon fas fa-plus"></span>
+                                </button>
+                            </td>
+                            <td class="text-center checkBoxCol"></td>
+                            <td class="text-left child1Co2Title">PA</td>
+                            <td colspan="2" class="text-left child1Co2Title">Jim Matos</td>
+                            <td class="text-left child1Co2Title">RM</td>
+                            <td colspan="6" class="text-left">Budget Allocated : $11,000.00</td>
+                            <td colspan="6" class="text-left">Remaining Budget : $10,469.62</td>
+                            <td colspan="6" class="text-left">Requested Spend : $530.38</td>
+                        </tr>
+                        <tr data-hide="parent-row-52-19-41">
+                            <td colspan="24">
+                                <div class="table-responsive tableGrayHead collapseTableBox mb-5">
+                                    <table id="orderSummaryTabList" class="table table-bordered table-hover mt-0" cell-fix-row="8">
+                                        <tbody>
+                                            <tr class="collapseHidden collapseChild2Head afterLevel-52-19 activeParRow" data-hide="parent-row-52-19-41" style="display: table-row;">
+                                                <td class="text-center"></td>
+                                                <td class="text-center checkBoxCol"></td>
+                                                <td class="text-left">Order ID</td>
+                                                <td class="text-left">Ordered Placed By</td>
+                                                <td class="text-left">Order Geography</td>
+                                                <td class="text-left">Item Name</td>
+                                                <td class="text-left">SKU</td>
+                                                <td class="text-right">Order QTY</td>
+                                                <td class="text-right">New Item Price ($)</td>
+                                                <td class="text-right">New Item Total ($)</td>
+                                                <td class="text-right">New Item Tax ($)</td>
+                                                <td class="text-right">New Freight Alloc (%)</td>
+                                                <td class="text-right">New Item Freight ($)</td>
+                                                <td class="text-right">Orig Item Price ($)</td>
+                                                <td class="text-right">Orig Item Total ($)</td>
+                                                <td class="text-right">Orig Item Tax</td>
+                                                <td class="text-right">Orig Item Freight ($)</td>
+                                                <td class="text-right">Order Freight Tax ($)</td>
+                                                <td class="text-right">Orig Freight Alloc (%)</td>
+                                                <td class="text-right">Order Total ($)</td>
+                                                <td class="text-right">New Order Total ($)</td>
+                                                <td class="text-left">Order Request Date (EST)</td>
+                                                <td class="text-left">Order Status</td>
+                                                <td class="text-left">Additional Budget Code</td>
+                                            </tr>  
+                                            <tr style="display: table-row;" class="collapseHidden afterLevel-52-19 activeParRow" data-hide="parent-row-52-19-41">
+                                                <td class="text-center chatBtnCol">
+                                                    <button type="button" class="btn btnIcon btnChatPopup" data-toggle="modal" data-target="#orderSummaryChatModal">
+                                                        <img loading="lazy" src="catalog/view/theme/dfws/image/chat-icon.svg" alt="" data-toggle="tooltip" title="Chat">
+                                                    </button>
+                                                </td>
+                                                <td class="text-center"></td>
+                                                <td class="text-left">DFWSPP0004</td>
+                                                <td class="text-left">Brad Frye</td>
+                                                <td class="text-left">DM</td>
+                                                <td class="text-left">12oz. Stemless Wine Cup</td>
+                                                <td class="text-left">DFWSTBDWD</td>
+                                                <td class="text-right">5</td>
+                                                <td class="text-right"></td>
+                                                <td class="text-right"></td>
+                                                <td class="text-right">0.00</td>
+                                                <td class="text-right">0.00</td>
+                                                <td class="text-right"></td>
+                                                <td class="text-right">250.00</td>
+                                                <td class="text-right">250.00</td>
+                                                <td class="text-right">15.88</td>
+                                                <td class="text-right">50.00</td>
+                                                <td class="text-right">3.18</td>
+                                                <td class="text-right">20.00</td>
+                                                <td class="text-right"><p class="textRed">$0.00</p></td>
+                                                <td class="text-right">$50.20</td>
+                                                <td class="text-left">03/04/2023 03:44:53</td>
+                                                <td class="text-left">
+                                                    <div class="statusTextSuccess">
+                                                        <p>Order Request Submitted</p>
+                                                    </div>
+                                                </td>
+                                                <td class="text-left">-</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                 </table>
+             </div>
+
+             
+
+
+
+             
+<br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br>
+
+
+
+
+
+
+
+
+             <div class="table-responsive tableGrayHead collapseTableBox parent-row">                               
+                 <table id="orderSummaryTabList" class="table table-bordered table-hover " cell-fix-row="8">
+                    <thead>
+                        <tr class="theadOne collapseParent stickyRow">
+                            <td class="text-center tableCollapseBtn parentCollapseBtn activeColBtn click-collpase click-collpase" id="parent-row-52-t">
+                                <button type="button" class="btn btnIcon">
+                                    <span class="tableCollapseIcon fas fa-plus"></span>
+                                </button>
+                            </td>
+                            <td colspan="5" class="text-left theadOneTitle">
+                                FY 24 Window 2 Fall Holiday Barone Fini Coupons - (Section 2)
+                            </td>
+                            <td colspan="6" class="text-left allocatedBudgetCol">Budget Allocated : $7,500.00</td>
+                            <td colspan="6" class="text-left remainingBrandCol">Remaining Budget : $6,969.62</td>
+                            <td colspan="6" class="text-left spendBudgetCol">Spend Budget : $530.38</td>
+         
+                        </tr>
+                    </thead>
+                    <tbody class="parentCollapseBox" data-hide="parent-row-52-t">
+                        <tr class="collapseChild1 stickyRow" id="level-52-19-t">
+                            <td data-count="1" class="text-center tableCollapseBtn childCollapseBtn getLevelOrders activeColBtn click-collpase" data-attribute-value="52" data-window-id="5" data-sales-hierachy-id="10" data-lookup-value-id="19" id="parent-row-52-19-t">
+                                <button type="button" class="btn btnIcon ">
+                                    <span class="tableCollapseIcon fas fa-plus"></span>
+                                </button>
+                            </td>
+                            <td class="checkBoxCol"></td>
+                            <td class="text-left child1ColTitle">Atlantic</td>
+                            <td colspan="2" class="text-left child1ColTitle">Tina Afonso</td>
+                            <td class="text-left child1ColTitle">RMM</td>
+                            <td colspan="6" class="text-left">Budget Allocated : $7,500.00</td>
+                            <td colspan="6" class="text-left">Remaining Budget : $6,969.62</td>
+                            <td colspan="6" class="text-left">Requested Spend : $530.38</td>
+                        </tr>    
+                        <tr class="collapseChild2 collapseHidden  afterLevel-52-19 activeParRow stickyRow" data-hide="parent-row-52-19-t" style="display: table-row;">
+                            <td class="text-center tableCollapseBtn subChildCollapseBtn activeColBtn click-collpase" id="parent-row-52-19-41-t">
+                                <button type="button" class="btn btnIcon">
+                                    <span class="tableCollapseIcon fas fa-plus"></span>
+                                </button>
+                            </td>
+                            <td class="text-center checkBoxCol"></td>
+                            <td class="text-left child1Co2Title">PA</td>
+                            <td colspan="2" class="text-left child1Co2Title">Jim Matos</td>
+                            <td class="text-left child1Co2Title">RM</td>
+                            <td colspan="6" class="text-left">Budget Allocated : $11,000.00</td>
+                            <td colspan="6" class="text-left">Remaining Budget : $10,469.62</td>
+                            <td colspan="6" class="text-left">Requested Spend : $530.38</td>
+                        </tr>
+                        <tr data-hide="parent-row-52-19-41-t">
+                            <td colspan="24">
+                                <div class="table-responsive tableGrayHead collapseTableBox" data-hide="parent-row-52-19-41-t">
+                                    <table id="orderSummaryTabList" class="table table-bordered table-hover " cell-fix-row="8">
+                                        <tbody>
+                                           <tr class="collapseHidden collapseChild2Head afterLevel-52-19 activeParRow" style="display: table-row;">
+                                               <td class="text-center"></td>
+                                               <td class="text-center checkBoxCol"></td>
+                                               <td class="text-left">Order ID</td>
+                                               <td class="text-left">Ordered Placed By</td>
+                                               <td class="text-left">Order Geography</td>
+                                               <td class="text-left">Item Name</td>
+                                               <td class="text-left">SKU</td>
+                                               <td class="text-right">Order QTY</td>
+                                               <td class="text-right">New Item Price ($)</td>
+                                               <td class="text-right">New Item Total ($)</td>
+                                               <td class="text-right">New Item Tax ($)</td>
+                                               <td class="text-right">New Freight Alloc (%)</td>
+                                               <td class="text-right">New Item Freight ($)</td>
+                                               <td class="text-right">Orig Item Price ($)</td>
+                                               <td class="text-right">Orig Item Total ($)</td>
+                                               <td class="text-right">Orig Item Tax</td>
+                                               <td class="text-right">Orig Item Freight ($)</td>
+                                               <td class="text-right">Order Freight Tax ($)</td>
+                                               <td class="text-right">Orig Freight Alloc (%)</td>
+                                               <td class="text-right">Order Total ($)</td>
+                                               <td class="text-right">New Order Total ($)</td>
+                                               <td class="text-left">Order Request Date (EST)</td>
+                                               <td class="text-left">Order Status</td>
+                                               <td class="text-left">Additional Budget Code</td>
+                                           </tr>  
+                                           <tr style="display: table-row;" class="collapseHidden afterLevel-52-19 activeParRow">
+                                               <td class="text-center chatBtnCol">
+                                                   <button type="button" class="btn btnIcon btnChatPopup" data-toggle="modal" data-target="#orderSummaryChatModal">
+                                                       <img loading="lazy" src="catalog/view/theme/dfws/image/chat-icon.svg" alt="" data-toggle="tooltip" title="Chat">
+                                                   </button>
+                                               </td>
+                                               <td class="text-center"></td>
+                                               <td class="text-left">DFWSPP0004</td>
+                                               <td class="text-left">Brad Frye</td>
+                                               <td class="text-left">DM</td>
+                                               <td class="text-left">12oz. Stemless Wine Cup</td>
+                                               <td class="text-left">DFWSTBDWD</td>
+                                               <td class="text-right">5</td>
+                                               <td class="text-right"></td>
+                                               <td class="text-right"></td>
+                                               <td class="text-right">0.00</td>
+                                               <td class="text-right">0.00</td>
+                                               <td class="text-right"></td>
+                                               <td class="text-right">250.00</td>
+                                               <td class="text-right">250.00</td>
+                                               <td class="text-right">15.88</td>
+                                               <td class="text-right">50.00</td>
+                                               <td class="text-right">3.18</td>
+                                               <td class="text-right">20.00</td>
+                                               <td class="text-right"><p class="textRed">$0.00</p></td>
+                                               <td class="text-right">$50.20</td>
+                                               <td class="text-left">03/04/2023 03:44:53</td>
+                                               <td class="text-left">
+                                                   <div class="statusTextSuccess">
+                                                       <p>Order Request Submitted</p>
+                                                   </div>
+                                               </td>
+                                               <td class="text-left">-</td>
+                                           </tr>
+                                       </tbody>
+                                   </table>
+                               </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                 </table>
+             </div>
+
+             
+
+        </section>
+        
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
+
+        <script src="https://unpkg.com/range-slider-element@latest"></script>
+        <link rel="stylesheet" href="https://unpkg.com/range-slider-element@latest/dist/styles.css">
+        <script>
+            $(document).ready(function() {
+                $(document).on("click", ".click-collpase", function(){
+                    var myId = this.id;
+                    alert(myId);
+                    $('[data-hide="'+myId+'"]').show(); //.addClass('child-row')
+                    $(this).addClass('reverse-collapse');
+                    var myHideTr = $('[data-hide="'+myId+'"]').find('td').attr('id');
+                })
+                $(document).on("click", ".click-collpase.reverse-collapse", function(){
+                    var myId2 = this.id;
+                    $('[data-hide="'+myId2+'"]').hide(); //.removeClass('child-row')
+                    $('[data-hide="'+myId2+'"]').nextUntil('.parent-row').hide();
+                    $(this).removeClass('reverse-collapse');
+                })
+            });
+        </script>
+    </body>
+</html>

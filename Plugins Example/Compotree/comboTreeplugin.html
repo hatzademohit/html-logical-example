@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.0.45/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="./comboTreeplugin.css">
+  </head>
+  <body>
+    <div style="padding: 20px;">
+        <input type="text" name="" id="sample-input">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./comboTreePlugin.js"></script>
+    <script>
+      var SampleJSONData = [
+        {
+          id: 0,
+          title: "choice 1  ",
+        },
+        {
+          id: 1,
+          title: "choice 2",
+          subs: [
+            {
+              id: 10,
+              title: "choice 2 1",
+            },
+            {
+              id: 11,
+              title: "choice 2 2",
+            },
+            {
+              id: 12,
+              title: "choice 2 3",
+            },
+          ],
+        },
+        {
+          id: 2,
+          title: "choice 3",
+        },
+        {
+          id: 3,
+          title: "choice 4",
+        },
+        {
+          id: 4,
+          title: "choice 5",
+        },
+        {
+          id: 5,
+          title: "choice 6",
+          subs: [
+            {
+              id: 50,
+              title: "choice 6 1",
+            },
+            {
+              id: 51,
+              title: "choice 6 2",
+              subs: [
+                {
+                  id: 510,
+                  title: "choice 6 2 1",
+                },
+                {
+                  id: 511,
+                  title: "choice 6 2 2",
+                },
+                {
+                  id: 512,
+                  title: "choice 6 2 3",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          id: 6,
+          title: "choice 7",
+        },
+      ];
+
+      comboTree = $('#sample-input').comboTree({
+            source : SampleJSONData,
+            //selected : [3,2],
+            isMultiple: true,
+            cascadeSelect: true,
+            collapse: false,
+        });
+        // comboTree.onChange(function(){
+        //     console.log(comboTree.getSelectedIds());
+        // });
+
+        $('*').click(function(){
+            $('.multiplesFilter').focus();
+        })
+    </script>
+  </body>
+</html>
+

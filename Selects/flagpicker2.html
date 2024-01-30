@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flag Picker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="flag-picker">
+        <button class="btn btn-info btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-expanded="false">
+            <span class="flag-icon flag-icon-in me-1"></span> <span>English</span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+                <a class="dropdown-item active" href="#"><span class="flag-icon flag-icon-au me-1"></span>
+                    <span>Australia</span>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-in me-1"></span>
+                    <span>India</span>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-id me-1"></span>
+                    <span>Indonesia</span>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-my me-1"></span>
+                    <span>Malaysia</span>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-sg me-1"></span>
+                    <span>Singapore</span>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-th me-1"></span>
+                    <span>Thailand</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        if ($(".flag-picker").length) {
+            $(document).on("click", ".dropdown-menu .dropdown-item", function (e) {
+            e.preventDefault();
+                if (!$(this).hasClass("active")) {
+                    if (!$(this).hasClass("active")) {
+                        $(".dropdown-menu .dropdown-item").removeClass("active");
+                        $(this).addClass("active");
+                        var className = $(this).find('span:first').attr('class')
+                        var newContent = '<span class="' + className + '"></span>' + $(this).text();
+                        $(this).parents(".dropdown").find(".btn").html(newContent);
+                    }
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

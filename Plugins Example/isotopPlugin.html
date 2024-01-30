@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />        
+		<title>Document</title>
+		<style>
+			.grid-item { 
+				width: 25%; padding: 4px;
+			}		 
+			@media only screen and (max-width: 767px) {
+				.grid-item{width: 50%;}
+			}
+			@media only screen and (max-width:400px) {
+				.grid-item{width: 100%;}
+			}
+			label, input{
+				cursor: pointer;
+			}
+			.bodyParentdiv .form-group{
+				width: fit-content;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">					
+			<div class="card">
+				<div class="card-header">
+					<h1>Permision Role</h1>
+				</div>
+				<div class="card-body">
+					<div class="form-group ml-4">
+						<input type="checkbox" id="select-checkbox" class="checkbox-custom-all">
+						<label class="form-check-label checkbox-custom-label" for="select-checkbox">Select All</label>
+					</div>
+					<div class="grid parent-grid-div">
+						<!-- first-grid -->
+						<div class="grid-item">
+							<!-- card 1 -->
+							<div class="card dataCard firstCard">
+								<div class="card-header d-flex justify-content-between align-items-center">
+									<div class="cardHeader ml-2">
+										<input type="checkbox" id="selectAll-parent" class="checkbox-custom checkbox-custom-parent-all">
+										<label class="form-check-label checkbox-custom-label" for="selectAll-parent">
+											Admin 1
+										</label>
+									</div>
+									<div class="minusIcon">
+										<i class="fa-solid fa-minus minusIcon"></i>
+									</div>
+								</div>
+								<div class="card-body bodyDiv">
+									<div class="bodyParentdiv">
+										<div class="form-group ml-2 mb-2">
+											<input type="checkbox" id="selectAll-1" class="checkbox-custom cust-check-child-parent">
+											<label class="form-check-label checkbox-custom-label" for="selectAll-1">
+												Broadcast Message
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" id="addMassage" data-id="selectAll-1" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addMassage">
+												Add Message
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-1" id="editMassage" class="checkbox-custom cust-check">
+											<label class="form-check-label  checkbox-custom-label" for="editMassage">
+												Edit/Update
+											</label>
+										</div>
+									</div>
+									
+									<div class="form-group ml-2 mb-2 bodyParentdiv">
+										<input type="checkbox" id="selectAll-2" data-id="body1" class="checkbox-custom  cust-check-child-parent">
+										<label class="form-check-label checkbox-custom-label mb-1" for="selectAll-2">
+											PPT Configuration
+										</label>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" id="activeinactive" data-id="selectAll-2" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="activeinactive">
+												Active/Inactive
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-2" id="addData-1" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-1">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-2" id="deleteData-1" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-1">
+												Delete
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-2" id="addData-2" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-2">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-2" id="deleteData-2" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-2">
+												Delete
+											</label>
+										</div>
+									</div>
+
+									<div class="form-group ml-2 mb-2 bodyParentdiv">
+										<input type="checkbox" id="selectAll-3" class="checkbox-custom cust-check-child-parent">
+										<label class="form-check-label checkbox-custom-label" for="selectAll-3">
+											PPT Configuration
+										</label>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" id="activeinactive-1" data-id="selectAll-3" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="activeinactive-1">
+												Active/Inactive
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-3" id="addData-3" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-3">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-3" id="deleteData-3" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-3">
+												Delete
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-3" id="addData-4" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-4">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-3" id="deleteData-4" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-4">
+												Delete
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- card 2 -->
+							<div class="card dataCard secondCard mt-3">
+								<div class="card-header d-flex justify-content-between align-items-center">
+									<div class="cardHeader ml-2">
+										<input type="checkbox" id="selectAll-parent-2" class="checkbox-custom checkbox-custom-parent-all">
+										<label class="form-check-label checkbox-custom-label" for="selectAll-parent-2">
+											Admin 1
+										</label>
+									</div>
+									<div class="minusIcon">
+										<i class="fa-solid fa-minus minusIcon"></i>
+									</div>
+								</div>
+								<div class="card-body bodyDiv">
+									<div class="bodyParentdiv">
+										<div class="form-group ml-2 mb-2">
+											<input type="checkbox" id="selectAll-4" class="checkbox-custom cust-check-child-parent">
+											<label class="form-check-label checkbox-custom-label" for="selectAll-4">
+												Broadcast Message
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" id="addMassage-1" data-id="selectAll-4" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addMassage-1">
+												Add Message
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-4" id="editMassage-1" class="checkbox-custom cust-check">
+											<label class="form-check-label  checkbox-custom-label" for="editMassage-1">
+												Edit/Update
+											</label>
+										</div>
+									</div>
+									
+									<div class="form-group ml-2 mb-2 bodyParentdiv">
+										<input type="checkbox" id="selectAll-5" data-id="body1" class="checkbox-custom  cust-check-child-parent">
+										<label class="form-check-label checkbox-custom-label mb-1" for="selectAll-5">
+											PPT Configuration
+										</label>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" id="activeinactive-5" data-id="selectAll-5" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="activeinactive-5">
+												Active/Inactive
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-5" id="addData-5" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-5">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-5" id="deleteData-5" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-5">
+												Delete
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-5" id="addData-20" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-20">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-5" id="deleteData-55" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-55">
+												Delete
+											</label>
+										</div>
+									</div>
+
+									<div class="form-group ml-2 mb-2 bodyParentdiv">
+										<input type="checkbox" id="selectAll-6" class="checkbox-custom cust-check-child-parent">
+										<label class="form-check-label checkbox-custom-label" for="selectAll-6">
+											PPT Configuration
+										</label>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" id="activeinactive-30" data-id="selectAll-6" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="activeinactive-30">
+												Active/Inactive
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-6" id="addData-6" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-6">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-6" id="deleteData-6" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-6">
+												Delete
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-6" id="addData-7" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-7">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-6" id="deleteData-7" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-7">
+												Delete
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Second grid -->
+						<div class="grid-item">
+							<!-- card 1 -->
+							<div class="card dataCard firstCard">
+								<div class="card-header d-flex justify-content-between align-items-center">
+									<div class="cardHeader ml-2">
+										<input type="checkbox" id="selectAll-parent-3" class="checkbox-custom checkbox-custom-parent-all">
+										<label class="form-check-label checkbox-custom-label" for="selectAll-parent-3">
+											Admin 1
+										</label>
+									</div>
+									<div class="minusIcon">
+										<i class="fa-solid fa-minus minusIcon"></i>
+									</div>
+								</div>
+								<div class="card-body bodyDiv">
+									<div class="bodyParentdiv">
+										<div class="form-group ml-2 mb-2">
+											<input type="checkbox" id="selectAll-10" class="checkbox-custom cust-check-child-parent">
+											<label class="form-check-label checkbox-custom-label" for="selectAll-10">
+												Broadcast Message
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" id="addMassage-11" data-id="selectAll-10" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addMassage-11">
+												Add Message
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-10" id="editMassage-11" class="checkbox-custom cust-check">
+											<label class="form-check-label  checkbox-custom-label" for="editMassage-11">
+												Edit/Update
+											</label>
+										</div>
+									</div>
+									
+									<div class="form-group ml-2 mb-2 bodyParentdiv">
+										<input type="checkbox" id="selectAll-12" data-id="body1" class="checkbox-custom  cust-check-child-parent">
+										<label class="form-check-label checkbox-custom-label mb-1" for="selectAll-12">
+											PPT Configuration
+										</label>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" id="activeinactive-11" data-id="selectAll-12" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="activeinactive-11">
+												Active/Inactive
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-12" id="addData-11" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-11">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-12" id="deleteData-122" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-122">
+												Delete
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-12" id="addData-12" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-12">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-12" id="deleteData-12" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-12">
+												Delete
+											</label>
+										</div>
+									</div>
+
+									<div class="form-group ml-2 mb-2 bodyParentdiv">
+										<input type="checkbox" id="selectAll-13" class="checkbox-custom cust-check-child-parent">
+										<label class="form-check-label checkbox-custom-label" for="selectAll-13">
+											PPT Configuration
+										</label>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" id="activeinactive-13" data-id="selectAll-13" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="activeinactive-13">
+												Active/Inactive
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-13" id="addData-13" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-13">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-13" id="deleteData-13" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-13">
+												Delete
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-13" id="addData-14" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-14">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-13" id="deleteData-14" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-14">
+												Delete
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- card 2 -->
+							<div class="card dataCard secondCard mt-3">
+								<div class="card-header d-flex justify-content-between align-items-center">
+									<div class="cardHeader ml-2">
+										<input type="checkbox" id="selectAll-parent-4" class="checkbox-custom checkbox-custom-parent-all">
+										<label class="form-check-label checkbox-custom-label" for="selectAll-parent-4">
+											Admin 1
+										</label>
+									</div>
+									<div class="minusIcon">
+										<i class="fa-solid fa-minus minusIcon"></i>
+									</div>
+								</div>
+								<div class="card-body bodyDiv">
+									<div class="bodyParentdiv">
+										<div class="form-group ml-2 mb-2">
+											<input type="checkbox" id="selectAll-14" class="checkbox-custom cust-check-child-parent">
+											<label class="form-check-label checkbox-custom-label" for="selectAll-14">
+												Broadcast Message
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" id="addMassage-21" data-id="selectAll-14" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addMassage-21">
+												Add Message
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-14" id="editMassage-21" class="checkbox-custom cust-check">
+											<label class="form-check-label  checkbox-custom-label" for="editMassage-21">
+												Edit/Update
+											</label>
+										</div>
+									</div>
+									
+									<div class="form-group ml-2 mb-2 bodyParentdiv">
+										<input type="checkbox" id="selectAll-15" class="checkbox-custom  cust-check-child-parent">
+										<label class="form-check-label checkbox-custom-label mb-1" for="selectAll-15">
+											PPT Configuration
+										</label>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" id="activeinactive-15" data-id="selectAll-15" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="activeinactive-15">
+												Active/Inactive
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-15" id="addData-15" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-15">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-15" id="deleteData-15" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-15">
+												Delete
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-15" id="addData-22" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-22">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-15" id="deleteData-25" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-25">
+												Delete
+											</label>
+										</div>
+									</div>
+
+									<div class="form-group ml-2 mb-2 bodyParentdiv">
+										<input type="checkbox" id="selectAll-16" class="checkbox-custom cust-check-child-parent">
+										<label class="form-check-label checkbox-custom-label" for="selectAll-16">
+											PPT Configuration
+										</label>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" id="activeinactive-21" data-id="selectAll-16" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="activeinactive-21">
+												Active/Inactive
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-16" id="addData-16" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-16">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-16" id="deleteData-16" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-16">
+												Delete
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-16" id="addData-17" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-17">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-16" id="deleteData-17" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-17">
+												Delete
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card dataCard secondCard mt-3">
+								<div class="card-header d-flex justify-content-between align-items-center">
+									<div class="cardHeader ml-2">
+										<input type="checkbox" id="selectAll-parent-5" class="checkbox-custom checkbox-custom-parent-all">
+										<label class="form-check-label checkbox-custom-label" for="selectAll-parent-5">
+											Admin 1
+										</label>
+									</div>
+									<div class="minusIcon">
+										<i class="fa-solid fa-minus minusIcon"></i>
+									</div>
+								</div>
+								<div class="card-body bodyDiv">
+									<div class="bodyParentdiv">
+										<div class="form-group ml-2 mb-2">
+											<input type="checkbox" id="selectAll-17" class="checkbox-custom cust-check-child-parent">
+											<label class="form-check-label checkbox-custom-label" for="selectAll-17">
+												Broadcast Message
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" id="addMassage-22" data-id="selectAll-17" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addMassage-22">
+												Add Message
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-17" id="editMassage-22" class="checkbox-custom cust-check">
+											<label class="form-check-label  checkbox-custom-label" for="editMassage-22">
+												Edit/Update
+											</label>
+										</div>
+									</div>
+									
+									<div class="form-group ml-2 mb-2 bodyParentdiv">
+										<input type="checkbox" id="selectAll-18" class="checkbox-custom  cust-check-child-parent">
+										<label class="form-check-label checkbox-custom-label mb-1" for="selectAll-18">
+											PPT Configuration
+										</label>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" id="activeinactive-100" data-id="selectAll-18" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="activeinactive-100">
+												Active
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-18" id="addData-100" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-100">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-18" id="deleteData-100" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-100">
+												Delete
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-18" id="addData-99" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-99">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-18" id="deleteData-99" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-99">
+												Delete
+											</label>
+										</div>
+									</div>
+
+									<div class="form-group ml-2 mb-2 bodyParentdiv">
+										<input type="checkbox" id="selectAll-19" class="checkbox-custom cust-check-child-parent">
+										<label class="form-check-label checkbox-custom-label" for="selectAll-19">
+											PPT Configuration
+										</label>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" id="activeinactive-98" data-id="selectAll-19" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="activeinactive-98">
+												Active/Inactive
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-19" id="addData-98" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-98">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-19" id="deleteData-98" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-98">
+												Delete
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-19" id="addData-97" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="addData-97">
+												Add
+											</label>
+										</div>
+										<div class="form-group ml-4 mb-2">
+											<input type="checkbox" data-id="selectAll-19" id="deleteData-97" class="checkbox-custom cust-check">
+											<label class="form-check-label checkbox-custom-label" for="deleteData-97">
+												Delete
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" ></script>
+		<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+		<script>
+			$('.grid').isotope({
+				itemSelector: '.grid-item',
+				layoutMode: 'fitRows'
+			});
+
+			$(document).ready(function(){
+				function InputBoxChecked(){
+					var allUnChecked = $('.parent-grid-div').find('[type="checkbox"]').length;
+					var allChecked = $('body').find('[type="checkbox"]:checked').length;
+					if(allUnChecked == allChecked){
+						$('.checkbox-custom-all').filter(':checkbox').prop('checked', true)
+					}else{
+						$('.checkbox-custom-all').filter(':checkbox').prop('checked', false)
+					}
+				}
+				InputBoxChecked();
+				
+				$('.cust-check').click(function(){
+					var id = $(this).closest('.bodyParentdiv').find('.cust-check-child-parent').attr('id');
+					var UnChecked = $('[data-id="'+ id +'"]').length;
+					var Checked = $('[data-id="'+ id +'"]:checked').length;
+					if(UnChecked == Checked){
+						$('#'+ id +'').filter(':checkbox').prop('checked', true)
+					}else{
+						$('#'+ id +'').filter(':checkbox').prop('checked', false)
+					}
+					var cardParentUnChecked = $(this).parents('.bodyDiv').find('.checkbox-custom').length;
+					var cardParentChecked = $(this).parents('.bodyDiv').find('.checkbox-custom:checked').length;
+					console.log(cardParentUnChecked, " ", cardParentChecked);					
+					if(cardParentUnChecked == cardParentChecked){
+						$(this).parents('.dataCard').find('.checkbox-custom-parent-all').filter(':checkbox').prop('checked', true)
+					}else{
+						$(this).parents('.dataCard').find('.checkbox-custom-parent-all').filter(':checkbox').prop('checked', false)
+					}
+					InputBoxChecked();
+				});
+
+				$('.cust-check-child-parent').click(function(){
+					var id = $(this).attr('id');
+					var checkTrue = $(this).is(':checked')
+					if(checkTrue == true){
+						$('[data-id="'+ id +'"]').filter(':checkbox').prop('checked', true)
+					}else{
+						$('[data-id="'+ id +'"]').filter(':checkbox').prop('checked', false)
+					}
+					var cardParentUnChecked = $(this).parents('.bodyDiv').find('.checkbox-custom').length;
+					var cardParentChecked = $(this).parents('.bodyDiv').find('.checkbox-custom:checked').length;
+					console.log(cardParentUnChecked, " ", cardParentChecked);
+					if(cardParentUnChecked == cardParentChecked){
+						$(this).parents('.dataCard').find('.checkbox-custom-parent-all').filter(':checkbox').prop('checked', true)
+					}else{
+						$(this).parents('.dataCard').find('.checkbox-custom-parent-all').filter(':checkbox').prop('checked', false)
+					}
+					InputBoxChecked();
+				})
+
+				$('.checkbox-custom-parent-all').click(function(){
+					var checkTrue = $(this).is(':checked')
+					if(checkTrue == true){
+						$(this).closest('.card').find('.checkbox-custom').filter(':checkbox').prop('checked', true)
+					}else{
+						$(this).closest('.card').find('.checkbox-custom').filter(':checkbox').prop('checked', false)
+					}
+					InputBoxChecked();
+				})
+				
+				$('.checkbox-custom-all').click(function(){
+					var checkTrue = $(this).is(':checked')
+					if(checkTrue == true){
+						$('.checkbox-custom').filter(':checkbox').prop('checked', true)
+					}else{
+						$('.checkbox-custom').filter(':checkbox').prop('checked', false)
+					}
+				})
+			 })
+		</script>
+	</body>
+</html>

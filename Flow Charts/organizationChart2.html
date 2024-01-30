@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organazation Chart Horizontal</title>
+    <style>
+        .highcharts-figure {
+            min-width: 360px;
+            margin: 1em auto;
+        }
+        #container{
+            min-width: 1500px;
+        }
+        #container h4 {
+            text-transform: none;
+            color: #000000;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        #container p {
+            font-size: 13px;
+            line-height: 16px;
+        }
+        path{
+            stroke-dasharray: 5;
+        }
+        .highcharts-label:first-child .arrows {
+            display: none !important;
+        }
+        .highcharts-label .arrows {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: -15px;
+            width: 10px;
+            /* border-width: 8px 19px 8px 17px;
+            border-style: solid;
+            border-color: transparent transparent transparent #acacac;
+            height: 0px; */
+        }
+        @media screen and (max-width: 600px) {
+            #container h4 {
+                font-size: 2.3vw;
+                line-height: 3vw;
+            }
+            #container p {
+                font-size: 2.3vw;
+                line-height: 3vw;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+      </figure>
+</body>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/sankey.js"></script>
+<script src="https://code.highcharts.com/modules/organization.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+    Highcharts.chart('container', {
+
+chart: {
+    height: 620,
+    inverted: false,
+    // inverted: true,
+    spacing: 8,
+    style: {
+        fontFamily: 'Oswald, sans-serif'
+    },
+},
+title: {
+    text: null
+},
+series: [{
+    type: 'organization',
+    name: 'Highcharts',
+    animation: false,
+    keys: ['from', 'to'],
+    data: [
+        ['ADMIN', 'MANAGER1'],
+        ['ADMIN', 'MANAGER2'],
+        ['ADMIN', 'MANAGER3'],
+        ['ADMIN', 'MANAGER4'],
+        ['ADMIN', 'MANAGER5'],
+        ['ADMIN', 'MANAGER6'],
+        ['ADMIN', 'MANAGER7'],
+        ['MANAGER6', 'PMO1'],
+        ['MANAGER6', 'PMO2'],
+        ['MANAGER6', 'PMO3'],
+        ['MANAGER6', 'PMO4'],
+        ['PMO2', 'TL'],
+        ['TL', 'EMPLOYEE1'],
+        ['TL', 'EMPLOYEE2'],
+        ['TL', 'EMPLOYEE3'],
+        ['TL', 'EMPLOYEE4'],
+        ['TL', 'EMPLOYEE5'],
+    ],
+    levels: [{
+        level: 0
+    },
+    {
+        level: 1
+    },
+    {
+        level: 2
+    },
+    {
+        level: 3
+    },
+    {
+        level: 4
+    }],
+    linkColor: '#000000',
+    linkLineWidth: 1,
+    linkRadius: 0,
+    nodes: [{
+        id: 'ADMIN',
+        name: "Admin",
+        color: 'transparent',
+        width: 250,
+        offset: 79,
+        level: 0,
+        image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/13105551/Vidar.jpg',
+        info: "Admin"
+    },
+    {
+        id: 'MANAGER1',
+        name: "MANAGER1",
+        color: 'transparent',
+        image: './flowchart-image/flow-img-01.png',
+        level: 1,
+        info: "MANAGER1",
+    },
+    {
+        id: 'MANAGER2',
+        name: "MANAGER2",
+        color: 'transparent',
+        image: './flowchart-image/flow-img-02.png',
+        level: 1,
+        info: "MANAGER2"
+    }, 
+    {
+        id: 'MANAGER3',
+        name: "MANAGER3",
+        color: 'transparent',
+        image: './flowchart-image/flow-img-03.png',
+        level: 1,
+        info: "MANAGER3"
+    }, 
+    {
+        id: 'MANAGER4',
+        name: "MANAGER4",
+        color: 'transparent',
+        image: './flowchart-image/flow-img-04.png',
+        level: 1,
+        info: "MANAGER4"
+    },
+    {
+        id: 'MANAGER5',
+        name: "MANAGER5",
+        color: 'transparent',
+        image: './flowchart-image/flow-img-05.png',
+        level: 1,
+        info: "MANAGER5"
+    }, 
+    {
+        id: 'MANAGER6',
+        name: "MANAGER6",
+        color: 'transparent',
+        image: './flowchart-image/flow-img-06.png',
+        level: 1,
+        info: "MANAGER6"
+    }, 
+    {
+        id: 'MANAGER7',
+        name: "MANAGER7",
+        color: 'transparent',
+        image: './flowchart-image/flow-img-07.png',
+        level: 1,
+        info: "MANAGER7"
+    }, 
+    {
+        id: 'PMO1',
+        name: "pmo1",
+        image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132317/Grethe.jpg',
+        color: 'transparent',
+        level: 2,
+        info: "Pmo1"
+    },
+    {
+        id: 'PMO2',
+        name: "Pmo2",
+        image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132317/Grethe.jpg',
+        color: 'transparent',
+        level: 2,
+        info: "Pmo2"
+    },
+    {
+        id: 'PMO3',
+        name: "Pmo3",
+        image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132317/Grethe.jpg',
+        color: 'transparent',
+        level: 2,
+        info: "Pmo3"
+    },
+    {
+        id: 'PMO4',
+        name: 'Pmo4',
+        color: 'transparent',
+        image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132314/AnneJorunn.jpg',
+        level: 2,
+        info: "Pmo4"
+    }, 
+    {
+        id: 'TL',
+        name: 'Avinash Sorte',
+        color: 'transparent',
+        image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132317/Grethe.jpg',
+        level: 3,
+        info: "UI team lead"
+    }, 
+    {
+        id: 'EMPLOYEE1',
+        name: "Mohit Hatzade",
+        image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132317/Grethe.jpg',
+        color: 'transparent',
+        level: 4,
+        info: "Trainee - Software (UI)"
+    },
+    {
+        id: 'EMPLOYEE2',
+        name: "Navin Narnaware",
+        image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132317/Grethe.jpg',
+        color: 'transparent',
+        level: 4,
+        info: "Trainee - Software (UI)"
+    }, 
+    {
+        id: 'EMPLOYEE3',
+        name: "Rajsing Sakharkar",
+        color: 'transparent',
+        image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132317/Grethe.jpg',
+        level: 4,
+        info: "Software (UI)"
+    }, 
+    {
+        id: 'EMPLOYEE4',
+        name: "Suraj Raut",
+        color: 'transparent',
+        image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132317/Grethe.jpg',
+        level: 4,
+        info: "Software (UI)"
+    }, 
+    {
+        id: 'EMPLOYEE5',
+        name: "Shrawani Shirpurkar",
+        color: 'transparent',
+        image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132313/Anita.jpg',
+        level: 4,
+        info: "Trainee - Software (UI)"
+    }],
+    colorByPoint: false,
+    color: '#007ad0',
+    // shadow: {
+    //     color: '#d1d1d1',
+    //     width: 8,
+    //     offsetX: 0,
+    //     offsetY: 4
+    // },
+    borderColor: '#acacac',
+    borderRadius: 0,
+    nodeWidth: 250,
+    nodePadding: 20,
+}],
+tooltip: {
+    outside: true,
+    backgroundColor: '#666',
+    borderColor: null,
+    borderRadius: 0,
+    style:{
+        color: '#fff',
+        cursor: 'default',
+        fontSize: '14px',
+        lineHeight: '22px',
+    },
+    formatter: function() {
+        return this.point.info;
+    }
+},
+
+});
+// $(document).ready(function(){
+//     $("<div class='arrows'></div>").appendTo(".highcharts-data-label ");
+// })
+$(document).ready(function(){
+    $("<img src='https://mcmerchnadev.lapine.dev/images/hichart-img/right-arrow-pointed.png' alt='' width='15' class='arrows'/>").appendTo(".highcharts-data-label ");
+})
+
+</script>
+</html>

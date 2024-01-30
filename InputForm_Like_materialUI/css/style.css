@@ -1,0 +1,86 @@
+/* select starting stylings ------------------------------*/
+.select {
+  position: relative;
+  margin-top: 5px;
+}
+
+label.select-label {
+  left: 11px;
+}
+
+input.select-text {
+  position: relative;
+  font-family: inherit;
+  background-color: transparent;
+  width: 100%;
+  padding: 10px 10px 10px 0;
+  font-size: 15px;
+  color: #000;
+  padding-left: 10px;
+}
+/* Remove focus */
+.request-form .select-text:focus {
+  outline: none;
+  color: #000;
+  border-color: #495057;
+}
+.request-form .form-control:focus {
+  box-shadow: unset !important;
+  border-color: #495057 !important;
+}
+/* Use custom arrow */
+.select .select-text {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* LABEL ======================================= */
+.select-label {
+  color: #212121;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  top: 10px;
+  transition: 0.2s ease all;
+  font: 10px;
+  background: #ffffff;
+  padding: 3px;
+}
+/* active state */
+.select-text:focus ~ .select-label,
+.select-text:valid ~ .select-label {
+  color: #212121;
+  top: -12px;
+  transition: 0.2s ease all;
+  font-size: 16px;
+  left: 7px;
+  padding: 0 4px;
+}
+
+.request-form label:not(.form-check-label):not(.custom-file-label) {
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  color: #757575;
+}
+
+.select:after {
+  position: absolute;
+  top: 22.8px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: "";
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #757575;
+  pointer-events: none;
+}
+.select.box:after {
+  border: 0;
+}
+
+.select-text.form-control {
+  height: 45px;
+}

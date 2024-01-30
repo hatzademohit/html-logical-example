@@ -1,0 +1,788 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,700;1,100;1,300;1,400;1,500&display=swap'); 
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box; font-family: 'Roboto', sans-serif;  
+}
+
+.group_blog {
+    border: 4px solid #000;
+    margin: 20px;
+    height: 100%;
+    padding: 20px 20px;
+    /* max-width: 1415px; */
+    margin: 0 auto;
+    /* min-width: 1415px; */
+    overflow: auto;
+    margin: 10px; 
+}
+ 
+.heading_upper {
+    font-size: 24px;
+    text-align: center;  
+    font-weight: 600;
+    margin-bottom: 30px; 
+} 
+
+.group_block {
+    display: flex;
+}  
+
+.iconState {
+    background: #ed7036;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}   
+
+.iconState img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover; 
+	position: relative;
+	z-index: 2;
+} 
+
+.status.initial_Item {
+    width: max-content;
+} 
+
+.status.initial_Item.second {
+	margin-top: 78px;
+	margin-left: -117px;
+	padding-left: 209px;
+	position: relative;
+}
+
+.status.initial_Item.second::before {
+	content: "";
+	position: absolute;
+	left: 33px;
+	border-left: 2px dashed #000;
+	height: 67px;
+	top: 29px;
+	transition: all .3s ease;
+}
+ 
+.status.initial_Item.second::after {
+	content: "";
+	position: absolute;
+	left: 33px;
+	border-bottom: 2px dashed #000;
+	top: 95px;
+	transition: all .3s ease;
+	width: 100px;
+} 
+
+.divState1 {
+    margin-bottom: 22px;
+}
+
+.iconState {
+	background: #fff;
+	border-radius: 50%;
+	width: 67px;
+	height: 67px;
+	margin: 0 auto 7px auto;
+	padding: 6px;
+	z-index: 2;
+} 
+
+.status_text {
+    text-align: center;
+    font-size: 14px;
+    max-width: 155px;
+    min-width: 155px;
+} 
+
+.status.initial_Item.second .statusInner.divState1 {
+    position: relative;
+    max-width: 200px;
+    min-width: 97px;
+}
+
+.status.initial_Item.second .statusInner.divState1 span {
+    position: relative;
+}
+
+.status.initial_Item.second .statusInner.divState1 span::before {
+    content: "";
+    position: absolute;
+    right: -33px;
+    border-bottom: 2px dashed #000;
+    top: 33px;
+    transition: all .3s ease;
+    width: 108px;
+}
+
+.status.initial_Item.second .statusInner.divState1 span::after {
+    content: "";
+    position: absolute;
+    left: -77px;
+    border-left: 2px dashed #000; 
+    height: 79px;
+    top: 33px;
+    transition: all .3s ease;
+}
+
+.status.initial_Item.second .statusInner.lowerDv{
+    position: relative;
+}
+ 
+.status.initial_Item.second .statusInner.lowerDv span{
+    position: relative;
+} 
+
+.status.initial_Item.second .statusInner.lowerDv span::before {
+	content: "";
+	position: absolute;
+	right: -71px;
+	border-bottom: 2px dashed #000; 
+	top: 30px;
+	transition: all .3s ease;
+	width: 147px;
+}
+
+.status.initial_Item.second .statusInner.lowerDv span::after {
+	content: "";
+	position: absolute;
+	left: -77px;
+	border-left: 2px dashed #000;
+	height: 63px;
+	top: -32px;
+	transition: all .3s ease;
+}
+
+.status.initial_Item.second.third {
+    padding-left: 176px;
+    margin-top: 137px;
+    margin-left: -47px;
+}
+
+.status.initial_Item.second.third::before {
+    display: none;
+}
+
+.status.initial_Item.second.third::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    border-bottom: 2px dashed #000;
+    top: 104px;
+    transition: all .3s ease;
+    width: 91px;
+}
+
+.status.initial_Item.second.third.fourth .statusInner.lowerDv {
+    margin-top: 220px;
+}
+
+/*third*/  
+.status.initial_Item.second.third  .statusInner {
+    position: relative;
+    left: -44px;
+}
+
+.status.initial_Item.second.third .statusInner.lowerDv::before {
+    left: 39px;
+}
+
+.status.initial_Item.second.third  .statusInner.divState1::before {
+    left: 39px;
+}
+
+.status.initial_Item.second.third .statusInner.divState1 span {
+    left: 37px;
+    top: -1px;
+}
+
+.status.initial_Item.second.third .statusInner.divState1 span::before { 
+    content: "";
+    position: absolute;
+    right: 0;
+    border-bottom: 2px dashed #000;
+    top: 33px;
+    transition: all .3s ease;
+    width: 72px;
+}
+
+.status.initial_Item.second.third .statusInner.divState1 span::after {
+    content: "";
+    position: absolute;
+    left: -74px;
+    border-left: 2px dashed #000; 
+    height: 74px;
+    top: 33px;
+    transition: all .3s ease;
+}
+
+.status.initial_Item.second.third .statusInner.lowerDv span::after { 
+    content: "";
+    position: absolute;
+    left: -37px;
+    border-left: 2px dashed #000; 
+    height: 74px;
+    top: -41px;
+    transition: all .3s ease;
+}
+
+.status.initial_Item.second.third .statusInner.lowerDv span::before {
+	content: "";
+	position: absolute;
+	right: auto;
+	border-bottom: 2px dashed #000; 
+	top: 31px;
+	transition: all .3s ease;
+	width: 72px;
+	left: -37px;
+}
+ 
+
+/*fourth*/
+
+.status.initial_Item.second.third.fourth {
+    /* padding-left: 84px; */
+    padding-left: 150px;
+}
+
+.status.initial_Item.second.third.fourth .statusInner.lowerDv {
+    margin-top: 200px;
+    left: -54px;
+} 
+
+.status.initial_Item.second.third.fourth::after {
+    top: 174px;
+    left: -11px; 
+    width: 53px;
+}
+
+.status.initial_Item.second.third.fourth .statusInner.lowerDv span::after {
+    content: "";
+    position: absolute;
+    left: -26px;
+    border-left: 2px dashed #000; 
+    height: 60px;
+    top: -26.5px;
+    transition: all .3s ease;
+} 
+
+.status.initial_Item.second.third.fourth .statusInner.lowerDv span::before {
+	content: "";
+	position: absolute;
+	right: auto;
+	border-bottom: 2px dashed #000;
+	top: 30.4px;
+	transition: all .3s ease; 
+	width: 53px;
+	left: -23px;
+}
+
+.status.initial_Item.second.third.fourth .statusInner.lowerDv::before { 
+    left: 24px;
+}
+ 
+/* fifth */ 
+
+.status.initial_Item.second.third.fourth.fifth {
+    margin-top: 257px;
+    padding-left: 120px;
+    margin-left: -41px;
+}
+
+.status.initial_Item.second.third.fourth.fifth .statusInner.lowerDv span::after { 
+    content: "";
+    position: absolute;
+    left: -26px;
+    border-left: 2px dashed #000; 
+    height: 60px; 
+    top: -25.5px; 
+    transition: all .3s ease;
+}
+
+.status.initial_Item.second.third.fourth.fifth .statusInner.lowerDv::before {
+    left: 16px;
+} 
+
+.status.initial_Item.second.third.fourth.fifth .statusInner.lowerDv span::before {
+    content: "";
+    position: absolute;
+    right: auto;
+    border-bottom: 2px dashed #000;
+    top: 32.4px;
+    transition: all .3s ease;
+    width: 56px;
+    left: -23px;
+}
+
+/*ready for shophub*/
+
+.status.initial_Item.second.third.fourth.fifth.readyForShopHub::after {
+    display: none;
+}  
+
+.status.initial_Item.second.third.fourth.fifth.readyForShopHub .statusInner.lowerDv span::after { 
+    display: none;
+}
+
+.status.initial_Item.second.third.fourth.fifth.readyForShopHub .statusInner.lowerDv {
+    left: -14px;
+}
+
+.status.initial_Item.second.third.fourth.fifth.readyForShopHub .statusInner.lowerDv::before {
+    left: -10px;
+} 
+
+.status.initial_Item.second.third.fourth.fifth.readyForShopHub .statusInner.lowerDv span::before {
+    content: "";
+    position: absolute;
+    right: auto;
+    border-bottom: 2px dashed #000;
+    top: 32.6px;
+    transition: all .3s ease;
+    width: 153px;
+    left: -110px;
+}
+
+/*Quote form*/
+
+.status.initial_Item.second.third.fourth.fifth.readyForShopHub.QuoteForm {
+    margin-left: 27px;
+} 
+
+.status.initial_Item.second.third.fourth.fifth.readyForShopHub.QuoteForm .statusInner.lowerDv::after {
+    content: "";
+    position: absolute;
+    border-top: 2px dashed #000;
+    width: 415px;
+    top: -21px;
+    left: -378px;
+}
+
+.status.initial_Item.second.third.fourth.fifth.readyForShopHub.QuoteForm .statusInner.lowerDv span::after {
+    content: "";
+    border-left: 2px dashed #000;
+    height: 20px;
+    position: absolute;
+    left: auto;
+    top: -19px;
+    display: block;
+    right: -38px;
+}
+
+.status.initial_Item.second.third.fourth.fifth.readyForShopHub.QuoteForm span.reverseArrow::before {
+    content: "";
+    border-left: 2px dashed #000;
+    left: -333px;
+    height: 21px;
+    display: block;
+    position: absolute;
+    top: auto;
+    bottom: 279px;
+} 
+
+.iconState.arrowStable {
+	position: relative;
+}
+
+.iconState.arrowStable::before {
+	content: "";
+	border-width: 5px 6px 4px 9px; 
+	border-color: transparent transparent transparent #000;
+	display: none;
+	border-style: solid;
+	position: absolute;
+	left: -8px;
+	display: block;
+	top: 29px;
+}
+
+.iconState.arrowStable.minusMN::before {
+    top: 27px;
+}
+ 
+.iconState.arrowStable.minusMN.toise::before {
+    top: 29px;
+}
+
+.status.initial_Item.second.third.fourth.fifth.readyForShopHub.QuoteForm .iconState, .status.initial_Item.second.third.fourth.fifth.readyForShopHub.QuoteForm .status_text {
+    position: relative;  
+    left: -38px;
+}  
+
+/*Final output*/ 
+.final_output {
+    width: max-content;
+    margin: 628px 0 0 -218px;
+    position: relative;
+    left: 15px;
+}
+
+.final_output::before {
+    content: "";
+    border-left: 2px dashed #000;
+    position: absolute;
+    left: -128px;
+    top: -47px;
+    display: block;
+    height: 80px;
+}
+
+.final_output::after {
+    content: "";
+    border-bottom: 2px dashed #000;
+    position: absolute;
+    left: -125px;
+    top: 33px;
+    display: block;
+    height: unset;
+    width: 208px;
+}
+ 
+.map_statistics {
+	display: inline-flex;
+	border: 2px solid #aaaaaa;
+	padding: 16px 16px 15px 16px;
+	margin-left: 3.5%;
+	margin-bottom: -5px;
+	margin-top: 14px;
+	min-width: 700px;
+}
+ 
+.map_statistics .status_cl_text { 
+    margin-left: 8px;
+    color: #000;
+    margin-right: 14px;  
+    padding-top: 19px;
+} 
+
+.map_statistics .status_cl_text.sm_top {
+    margin-top: -7px;
+}
+
+.stated_color {
+	height: 54px;
+	width: 54px;
+	display: block;
+	border-radius: 50%;
+}
+
+.stated_color.red{
+    background-color:#ed7036; 
+}
+
+.stated_color.yellow{
+    background-color:#ffc000; 
+}
+
+.stated_color.green{
+    background-color:#96b748; 
+}
+
+.stated_color.gray{ 
+    background-color:#84817d;  
+}
+
+.mx_container {
+	max-width: 1367px;
+	margin: 0 auto;
+	min-width: 1366px;
+	overflow: auto;
+} 
+
+.red_quote{
+    color:red;
+    font-style:italic;
+}
+
+/*Hide reverse condition*/
+
+.dashLine_infi {
+	position: relative;
+} 
+
+/* .dashLine_infi::before {
+	content: "";
+	border-left: 2px dashed #000;
+	position: absolute;
+	left: -77px;
+	top: 33px; 
+	z-index: 1;
+	display: block;
+	height: 85.6%;
+}  */
+
+/*levelAppend CSS*/
+/* lavel 1 */
+.statusInner.lowerDv.append_level1 {
+	margin-top: 20px;
+}
+
+.status.initial_Item.second .statusInner.lowerDv.append_level1 span::after {
+    top: -193px;
+    height: 225px;
+    left: -77px;
+} 
+
+/*new rules*/
+
+.status.initial_Item.second.third.fourth.fifth::after {
+    top: 174px;
+    width: 99px;
+    left: -58px;
+} 
+ 
+.status.initial_Item.second.third.fourth.fifth.readyForShopHub.QuoteForm span.reverseArrow::after {
+    content: "dds";
+    content: "";
+    border-width: 5px 6px 4px 9px;
+    border-color: transparent transparent transparent #000;
+    display: none;
+    border-style: solid;
+    position: absolute;
+    left: -9px;
+    display: block;
+    top: auto;
+    transform: rotate(90deg);
+    bottom: 276px;
+    left: -339.6px;
+} 
+
+ 
+
+/*mozilla issue prefixe css*/
+
+@-moz-document url-prefix() {
+
+    .iconState.arrowStable.minusMN.toise::before {
+        top: 27px;
+    }
+    
+    .status.initial_Item.second .statusInner.lowerDv {
+        position: relative;
+        top: 0px;
+        margin-bottom: 20px;
+    }
+
+    .status.initial_Item.second .statusInner.lowerDv span {
+        position: relative;
+        top: 16px;
+    }
+
+    .status.initial_Item.second .statusInner.divState1 span::before {
+        content: "";
+        position: absolute;
+        right: -38px;
+        border-bottom: 2px dashed #000;
+        top: 46px;
+        transition: all .3s ease;
+        width: 115px;
+    } 
+
+    .status.initial_Item.second .statusInner.divState1 span::after {
+        content: "";
+        position: absolute;
+        left: -77px;
+        border-left: 2px dashed #000; 
+        height: 63px;
+        top: 48px;
+        transition: all .3s ease;
+    } 
+
+    .status.initial_Item.second.third .statusInner.divState1 span::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        border-bottom: 2px dashed #000;
+        top: 47px;
+        transition: all .3s ease;
+        width: 72px;
+    } 
+
+    .status.initial_Item.second.third .statusInner.divState1 span::after {
+        content: "";
+        position: absolute;
+        left: -74px;
+        border-left: 2px dashed #000; 
+        height: 74px;
+        top: 49px;
+        transition: all .3s ease;
+    } 
+
+    .status.initial_Item.second.third.fourth .statusInner.lowerDv span::after {
+        content: "";
+        position: absolute; 
+        left: -26px;
+        border-left: 2px dashed #000; 
+        height: 73px;
+        top: -38.5px;
+        transition: all .3s ease;
+    } 
+
+    .status.initial_Item.second.third.fourth::after {
+        top: 183px;
+        left: -49px; 
+        width: 53px;
+    } 
+
+    .status.initial_Item.second.third.fourth.fifth .statusInner.lowerDv span::after {
+        content: "";
+        position: absolute;
+        left: -26px;
+        border-left: 2px dashed #000; 
+        height: 60px;
+        top: -26.5px;
+        transition: all .3s ease;
+    } 
+
+    .status.initial_Item.second.third::after {
+        content: "";
+        position: absolute;
+        left: 33px;
+        border-bottom: 2px dashed #000;
+        top: 90px;
+        transition: all .3s ease; 
+        width: 61px;
+    }
+
+    .status.initial_Item.second.third .statusInner.divState1 span::after {
+        height: 84px; 
+        top: 49px;
+        transition: all .3s ease;
+    }
+
+    .status.initial_Item.second.third.fourth .statusInner.lowerDv span::after {
+        content: "";
+        position: absolute;
+        left: -25px;
+        border-left: 2px dashed #000;
+        height: 72px;
+        top: -39.6px;
+        transition: all .3s ease;
+    } 
+     
+    .status.initial_Item.second.third.fourth::after {
+        top: 161px;
+        left: -47px;
+        width: 53px;
+    }
+
+    .status.initial_Item.second.third.fourth.fifth.readyForShopHub.QuoteForm span.reverseArrow::before {
+        content: "";
+        border-left: 2px dashed #000;
+        left: -248px;
+        height: 21px;
+        display: block;
+        position: absolute;
+        top: auto;
+        bottom: 308px;
+    } 
+     
+    .final_output::before {
+        content: "";
+        border-left: 2px dashed #000;
+        position: absolute;
+        left: -285px;
+        top: -45px;
+        display: block;
+        height: 81px;
+    }
+
+    .status.initial_Item.second.third.fourth.fifth.readyForShopHub.QuoteForm span.reverseArrow::after {
+        content: "dds";
+        content: "";
+        border-width: 5px 6px 4px 9px;
+        border-color: transparent transparent transparent #000;
+        display: none;
+        border-style: solid;
+        position: absolute;
+        left: -8px;
+        display: block;
+        top: auto;
+        transform: rotate(90deg);
+        bottom: 310px;
+        left: -254px;
+    }  
+
+}/*moz prefix*/  
+
+/* css added by mohit */
+.status.initial_Item.second.briefSubmited {
+    margin-top: 208px;
+    padding-left: 132px;
+}
+.status.initial_Item.second.briefSubmited::before, 
+.status.initial_Item.second.briefSubmited::after, 
+.status.initial_Item.second.briefSubmited .statusInner.divState1 span::after, 
+.status.initial_Item.second.step_four::before,
+.status.initial_Item.second.third.fourth.step_fourth .statusInner.lowerDv span::after,
+.status.initial_Item.second.third.step_fourth.fourth::after
+
+{
+    display: none;
+}
+.third_step{
+    margin-top: 10px;
+}
+.status.initial_Item.second.third.third_step .statusInner.lowerDv.laststep span::after {
+    height: 120px;
+    top: -89px;
+}
+.status.initial_Item.second.step_four {
+    margin-top: 203px;
+    padding-left: 211px;
+    margin-left: -91px;
+}
+.status.initial_Item.second.third.fourth.step_fourth .statusInner.lowerDv span::before {
+    left: -91px;
+    width: 125px;
+}
+.status.initial_Item.second.third.fourth.step_fourth_new_added {
+    margin-top: 196px;
+}
+.status.initial_Item.second.third.step_fourth_new_added.fourth::after {
+    top: 174px;
+    left: -45px;
+    width: 114px;
+}
+.status.initial_Item.second.third.fourth.fifth.readyForShopHub.QuoteForm .statusInner.lowerDv span::before {
+    left: inherit;
+    right: 5px;
+}
+.status.initial_Item.second.step_four::after {
+    left: 3px;
+    width: 130px;
+}
+.status.initial_Item.second.third.fourth.fifth.readyForShopHub {
+    padding-left: 60px;
+}
+.info_label {
+    padding: 10px;
+    border: 2px dashed #000000;
+    width: fit-content;
+    position: absolute;
+    right: 35px;
+}
+.info_label div{
+    margin-bottom: 7px;
+}
+.info_label span {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 50%;
+}
+.info_label .vendor span{
+    background-color: #ed7036;
+}
+.info_label .admin span{
+    background-color: #ffc000;
+}
+.info_label .adminEcommerce span{
+    background-color: #96b748;
+}
+.info_label .adminEcommerceuser span{
+    background-color: #8c7f76;
+}
+
+@import url('https://fonts.cdnfonts.com/css/soleil');

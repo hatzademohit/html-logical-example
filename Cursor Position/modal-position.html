@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/fontawesome.min.css" />
+
+        <link href="https://www.dafontfree.net/embed/dGhhbGVpYS1yZWd1bGFyJmRhdGEvMTgvdC84Njk2OC9USEFMRUlBXy5UVEY" rel="stylesheet" type="text/css"/>
+
+        <style>
+            .my-div{
+                position: fixed;
+                z-index: 99999;
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <section class="container-fluid px-0">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Launch demo modal
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                    <input type="text" class="form-control my-input" placeholder="Mohit">
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <div class="my-div card">
+            I am Mohit
+        </div> -->
+        
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
+        <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
+
+        <script src="https://unpkg.com/range-slider-element@latest"></script>
+        <link rel="stylesheet" href="https://unpkg.com/range-slider-element@latest/dist/styles.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script>
+            let $modal = $(".modal");
+                $modal.draggable({
+                handle: ".modal-header",
+                alert: 'dsadasd'
+            });
+            $modal.resizable();
+
+            $(document).ready(function(){
+                $('.modal').mousemove(function(){
+                    // var divPos = $(".inputpicker-input").offset();
+                    // console.log('my left pos' + divPos.left + 'top' + divPos.top);
+                    // $('.inputpicker-wrapped-list').css({"left": divPos.left+'px', "top": divPos.top+40+'px',})
+                    var position = $('.modal-title').offset();
+                    var leftpo = position.left;
+                    var toppo = position.top;
+                    // console.log("top ", toppo, " ", " ", "left ", leftpo );
+                    console.log(position );
+                })
+            })
+
+            // $('.my-input').inputpicker({
+            //     data:[
+            //         {value:"1",text:"Text 1", description: "This is the description of the text 1."},
+            //         {value:"2",text:"Text 2", description: "This is the description of the text 2."},
+            //         {value:"3",text:"Text 3", description: "This is the description of the text 3."}
+            //     ],
+            //     fields:[
+            //         {name:'value',text:'Id'},
+            //         {name:'text',text:'Title'},
+            //         {name:'description',text:'Description'}
+            //     ],
+            //     autoOpen: true,
+            //     headShow: true,
+            //     fieldText : 'text',
+            //     fieldValue: 'value'
+            // });
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .octagon-button {
+        width: 220px;
+        height: 45px;
+        background-color: #e7735a;
+        position: relative;
+        clip-path: polygon(14% 0%, 86% 0%, 100% 14%, 100% 86%, 86% 100%, 14% 100%, 0% 86%, 0% 14%);
+        border: 0;
+        cursor: pointer;
+    }
+    /* .octagon-button:before {
+      content: "";
+      position: absolute;
+      top: -14px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #e7735a;
+      clip-path: polygon(0% 14%, 0% 86%, 14% 100%, 86% 100%, 100% 86%, 100% 14%, 86% 0%, 14% 0%);
+    } */
+    .octagon-button span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <button type="button" class="octagon-button">
+    <span>ADD TO CART</span>
+  </button>
+</body>
+</html>

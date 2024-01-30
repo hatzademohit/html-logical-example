@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Selct2 css -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <table class="table table-bordered" id="appendTable">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Adress</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mohit</td>
+            <td>Hatzade</td>
+            <td>mhatzade@valethi.in</td>
+            <td>
+              <button class="btn btn-sm btn-info addBtn" onClick="addRow()">
+                <i class="fa fa-plus"></i>
+              </button>
+              <button class="btn btn-sm btn-danger minusBtn">
+                <i class="fa fa-minus"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      function addRow() {
+        $("#appendTable").prepend(
+          `<tr>
+            <td>Mohit</td>
+            <td>Hatzade</td>
+            <td>mhatzade@valethi.in</td>
+            <td>
+                <button class="btn btn-sm btn-info addBtn" onClick="addRow()">
+                  <i class="fa fa-plus"></i>
+                </button>
+                <button class="btn btn-sm btn-danger minusBtn">
+                  <i class="fa fa-minus"></i>
+                </button>
+            </td>
+          </tr>`
+        );
+        addData();
+      }
+
+      function addData(id) {
+        $(document).ready(function () {
+          $("#appendTable").find("tr:not(first-child) .addBtn").css("display", "none");
+          $("#appendTable").find("tr:first-child .addBtn").css("display", "none");
+          $("#appendTable").find("tr:last-child .addBtn").css("display", "");
+          var appendTable_row_length = $("#appendTable > tbody > tr").length;
+          // console.log(appendTable_row_length);
+          if (appendTable_row_length <= 1) {
+            $("#appendTable")
+              .find("tr:first-child .minusBtn")
+              .css("display", "none");
+          } else {
+            $("#appendTable")
+              .find("tr:last-child .minusBtn")
+              .css("display", "");
+          }
+        });
+        $(".minusBtn").click(function () {
+          $(this).closest("tr").remove();
+          addData();
+        });
+      }
+      addData();
+    </script>
+  </body>
+</html>

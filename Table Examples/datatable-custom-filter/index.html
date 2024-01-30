@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <!-- bootstrap 4 -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/datetime/1.4.0/css/dataTables.dateTime.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+  <style>
+    thead input {
+      width: 100%;
+    }
+
+    .new-table {
+      float: right;
+      position: absolute;
+      top: 0px;
+      right: 539px;
+      background: #4c4a4c;
+      color: #fff;
+    }
+
+    /* .date-range-hide{display: none;} */
+
+    .date-range-hide tr td {
+      font-size: 12px;
+    }
+
+    .navin {
+      padding: 50px;
+    }
+
+    .date-range-div {
+      position: relative;
+    }
+
+    .date-range-div i {
+      position: absolute;
+      top: 11px;
+      right: 16px;
+    }
+
+    #example thead tr th:nth-child(3),
+    #example thead tr th:nth-child(4),
+    #example thead tr th:nth-child(5),
+    #example thead tr th:nth-child(6) {
+      position: relative;
+    }
+
+    .fitler-icon {
+      position: absolute;
+      right: 22px;
+      top: 13px;
+    }
+
+    .fitler-icon i {
+      color: #000;
+      padding-left: 8px;
+    }
+
+
+    .date-range-custom {
+      position: absolute;
+      top: 95px;
+      right: 0;
+      width: 150px;
+    }
+
+    span.select2.select2-container.select2-container--default.select2-container {
+      width: 100% !important;
+      max-width: 150px !important;
+      min-width: 150px !important;
+    }
+
+    input.select2-search__field {
+      display: none;
+    }
+
+    .date-range-al {
+      display: none;
+    }
+
+    .date-range-dl {
+      display: none;
+    }
+
+    .office-filterChange {
+      display: none;
+    }
+
+    .age-range-al {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navin mt-4">
+    <table id="example" class="display nowrap" style="width: 100%">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Office
+            <div class="date-range-custom office-filterChange">
+              <select id="officeLocation" name="statusTypeChange">
+                <option value="All">All</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="New York">New York</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="London">London</option>
+                <option value="Edinburgh">Edinburgh</option>
+              </select>
+            </div>
+          </th>
+          <th>Age
+            <div class="date-range-custom age-range-al">
+              <select id="ageChange" name="agefilter">
+                <option value="All">All</option>
+                <option value="22">22-year-old worker</option>
+                <option value="abovetwentytwo">Age above 22</option>
+                <option value="belowtwentytwo">Age below 22</option>
+                <option value="belowsixty">Age below 60</option>
+                <option value="belowthirty">Age below 30</option>
+              </select>
+            </div>
+          </th>
+          <th>
+            Allocation date
+
+            <div class="date-range-custom date-range-al">
+              <select id="allocation-date-filter1" name="allocationfilter">
+                <option value="equal">Is equal to</option>
+                <option value="after or equal">Is after or equal to</option>
+                <option value="after">Is after</option>
+                <option value="before or equal">Is before or equal to</option>
+                <option value="before">Is before</option>
+                <option value="date range">Date range</option>
+              </select>
+              <div class="d-none align-items-center date-range-div">
+                <input type="text" class="form-control minRl" id="minRl" name="minRl" placeholder="mindate" />
+                <i class="fa fa-calendar calendar-icon" aria-hidden="true"></i>
+              </div>
+              <div class="d-none align-items-center date-range-div">
+                <input type="text" class="form-control" id="maxRl" name="maxRl" placeholder="maxdate" />
+                <i class="fa fa-calendar calendar-icon" aria-hidden="true"></i>
+              </div>
+              <div class="d-none align-items-center date-range-div">
+                <input type="text" class="form-control" id="isAfter" name="isAfter" placeholder="is after" />
+                <i class="fa fa-calendar calendar-icon" aria-hidden="true"></i>
+              </div>
+              <div class="d-none align-items-center date-range-div">
+                <input type="text" class="form-control" id="isBefore" name="isBefore" placeholder="is before" />
+                <i class="fa fa-calendar calendar-icon" aria-hidden="true"></i>
+              </div>
+              <div class="align-items-center date-range-div">
+                <input type="text" class="form-control" id="isEqual" name="isEqual" placeholder="is equal" />
+                <i class="fa fa-calendar calendar-icon" aria-hidden="true"></i>
+              </div>
+            </div>
+          </th>
+          <th> Deallocation date
+
+            <div class="date-range-custom date-range-dl">
+              <select id="allocation-date-filterNew" name="allocationfilterNew">
+                <option value="equal">Is equal to</option>
+                <option value="after or equal">Is after or equal to </option>
+                <option value="after">Is after</option>
+                <option value="before or equal">Is before or equal to</option>
+                <option value="before">Is before</option>
+                <option value="date range">Date range</option>
+              </select>
+              <div class="d-none align-items-center date-range-div">
+                <input type="text" class="form-control minRl" id="minNewRl" name="minNewRl" placeholder="mindate">
+                <i class="fa fa-calendar calendar-icon" aria-hidden="true"></i>
+              </div>
+              <div class="d-none align-items-center date-range-div">
+                <input type="text" class="form-control" id="maxNewRl" name="maxNewRl" placeholder="maxdate">
+                <i class="fa fa-calendar calendar-icon" aria-hidden="true"></i>
+              </div>
+              <div class="d-none align-items-center date-range-div">
+                <input type="text" class="form-control" id="isAfterNew" name="isAfterNew" placeholder="is after">
+                <i class="fa fa-calendar calendar-icon" aria-hidden="true"></i>
+              </div>
+              <div class="d-none align-items-center date-range-div">
+                <input type="text" class="form-control" id="isBeforeNew" name="isBeforeNew" placeholder="is before">
+                <i class="fa fa-calendar calendar-icon" aria-hidden="true"></i>
+              </div>
+              <div class=" align-items-center date-range-div">
+                <input type="text" class="form-control" id="isEqualNew" name="isEqualNew" placeholder="is equal">
+                <i class="fa fa-calendar calendar-icon" aria-hidden="true"></i>
+              </div>
+            </div>
+          </th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tiger Nixon</td>
+          <td>System Architect</td>
+          <td>Edinburgh</td>
+          <td>61</td>
+          <td>04-25-2023</td>
+          <td>05-25-2024</td>
+          <td>$320,800</td>
+        </tr>
+        <tr>
+          <td>Garrett Winters</td>
+          <td>Accountant</td>
+          <td>Tokyo</td>
+          <td>63</td>
+          <td>04-25-2023</td>
+          <td>05-25-2024</td>
+          <td>$170,750</td>
+        </tr>
+        <tr>
+          <td>Ashton Cox</td>
+          <td>Junior Technical Author</td>
+          <td>San Francisco</td>
+          <td>66</td>
+          <td>04-25-2023</td>
+          <td>05-25-2024</td>
+          <td>$86,000</td>
+        </tr>
+        <tr>
+          <td>Cedric Kelly</td>
+          <td>Senior Javascript Developer</td>
+          <td>Edinburgh</td>
+          <td>22</td>
+          <td>04-28-2023</td>
+          <td>05-30-2024</td>
+          <td>$433,060</td>
+        </tr>
+        <tr>
+          <td>Airi Satou</td>
+          <td>Accountant</td>
+          <td>Tokyo</td>
+          <td>33</td>
+          <td>04-15-2023</td>
+          <td>05-16-2024</td>
+          <td>$162,700</td>
+        </tr>
+        <tr>
+          <td>Brielle Williamson</td>
+          <td>Integration Specialist</td>
+          <td>New York</td>
+          <td>61</td>
+          <td>04-02-2023</td>
+          <td>05-08-2024</td>
+          <td>$372,000</td>
+        </tr>
+        <tr>
+          <td>Herrod Chandler</td>
+          <td>Sales Assistant</td>
+          <td>San Francisco</td>
+          <td>59</td>
+          <td>04-02-2023</td>
+          <td>05-08-2024</td>
+          <td>$137,500</td>
+        </tr>
+        <tr>
+          <td>Rhona Davidson</td>
+          <td>Integration Specialist</td>
+          <td>Tokyo</td>
+          <td>55</td>
+          <td>04-02-2023</td>
+          <td>05-08-2024</td>
+          <td>$327,900</td>
+        </tr>
+        <tr>
+          <td>Colleen Hurst</td>
+          <td>Javascript Developer</td>
+          <td>San Francisco</td>
+          <td>39</td>
+          <td>04-02-2023</td>
+          <td>05-08-2024</td>
+          <td>$205,500</td>
+        </tr>
+        <tr>
+          <td>Sonya Frost</td>
+          <td>Software Engineer</td>
+          <td>Edinburgh</td>
+          <td>23</td>
+          <td>04-02-2023</td>
+          <td>05-08-2024</td>
+          <td>$103,600</td>
+        </tr>
+        <tr>
+          <td>Jena Gaines</td>
+          <td>Office Manager</td>
+          <td>London</td>
+          <td>30</td>
+          <td>04-02-2023</td>
+          <td>05-08-2024</td>
+          <td>$90,560</td>
+        </tr>
+        <tr>
+          <td>Quinn Flynn</td>
+          <td>Support Lead</td>
+          <td>Edinburgh</td>
+          <td>22</td>
+          <td>04-02-2023</td>
+          <td>05-08-2024</td>
+          <td>$342,000</td>
+        </tr>
+        <tr>
+          <td>Charde Marshall</td>
+          <td>Regional Director</td>
+          <td>San Francisco</td>
+          <td>36</td>
+          <td>04-02-2023</td>
+          <td>05-08-2024</td>
+          <td>$470,600</td>
+        </tr>
+        <tr>
+          <td>Haley Kennedy</td>
+          <td>Senior Marketing Designer</td>
+          <td>London</td>
+          <td>43</td>
+          <td>04-18-2023</td>
+          <td>05-16-2024</td>
+          <td>$313,500</td>
+        </tr>
+        <tr>
+          <td>Tatyana Fitzpatrick</td>
+          <td>Regional Director</td>
+          <td>London</td>
+          <td>19</td>
+          <td>04-18-2023</td>
+          <td>05-16-2024</td>
+          <td>$385,750</td>
+        </tr>
+        <tr>
+          <td>Michael Silva</td>
+          <td>Marketing Designer</td>
+          <td>London</td>
+          <td>66</td>
+          <td>04-18-2023</td>
+          <td>05-16-2024</td>
+          <td>$198,500</td>
+        </tr>
+        <tr>
+          <td>Paul Byrd</td>
+          <td>Chief Financial Officer (CFO)</td>
+          <td>New York</td>
+          <td>64</td>
+          <td>04-18-2023</td>
+          <td>05-16-2024</td>
+          <td>$725,000</td>
+        </tr>
+        <tr>
+          <td>Gloria Little</td>
+          <td>Systems Administrator</td>
+          <td>New York</td>
+          <td>59</td>
+          <td>04-18-2023</td>
+          <td>05-16-2024</td>
+          <td>$237,500</td>
+        </tr>
+        <tr>
+          <td>Bradley Greer</td>
+          <td>Software Engineer</td>
+          <td>London</td>
+          <td>41</td>
+          <td>04-20-2023</td>
+          <td>05-25-2024</td>
+          <td>$132,000</td>
+        </tr>
+        <tr>
+          <td>Dai Rios</td>
+          <td>Personnel Lead</td>
+          <td>Edinburgh</td>
+          <td>35</td>
+          <td>04-21-2023</td>
+          <td>05-25-2024</td>
+          <td>$217,500</td>
+        </tr>
+        <tr>
+          <td>Jenette Caldwell</td>
+          <td>Development Lead</td>
+          <td>New York</td>
+          <td>30</td>
+          <td>04-22-2023</td>
+          <td>05-26-2024</td>
+          <td>$345,000</td>
+        </tr>
+        <tr>
+          <td>Yuri Berry</td>
+          <td>Chief Marketing Officer (CMO)</td>
+          <td>New York</td>
+          <td>40</td>
+          <td>04-15-2023</td>
+          <td>05-26-2024</td>
+          <td>$675,000</td>
+        </tr>
+        <tr>
+          <td>Caesar Vance</td>
+          <td>Pre-Sales Support</td>
+          <td>New York</td>
+          <td>21</td>
+          <td>04-15-2023</td>
+          <td>05-26-2024</td>
+          <td>$106,450</td>
+        </tr>
+        <tr>
+          <td>Doris Wilder</td>
+          <td>Sales Assistant</td>
+          <td>Sydney</td>
+          <td>23</td>
+          <td>04-15-2023</td>
+          <td>05-26-2024</td>
+          <td>$85,600</td>
+        </tr>
+        <tr>
+          <td>Angelica Ramos</td>
+          <td>Chief Executive Officer (CEO)</td>
+          <td>London</td>
+          <td>47</td>
+          <td>04-15-2023</td>
+          <td>05-26-2024</td>
+          <td>$1,200,000</td>
+        </tr>
+        <tr>
+          <td>Gavin Joyce</td>
+          <td>Developer</td>
+          <td>Edinburgh</td>
+          <td>42</td>
+          <td>06-20-2023</td>
+          <td>08-25-2024</td>
+          <td>$92,575</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <!-- ===================================================================================== -->
+
+  <script>
+    // Custom filtering function which will search data in column four between two values
+
+    $(document).ready(function () {
+      // Create date inputs
+      minDateRl = new DateTime($("#minRl"), {
+        format: "MM-DD-YYYY",
+      });
+      maxDateRl = new DateTime($("#maxRl"), {
+        format: "MM-DD-YYYY",
+      });
+      minDateNewRl = new DateTime($("#minNewRl"), {
+        format: "MM-DD-YYYY",
+      });
+      maxDateNewRl = new DateTime($("#maxNewRl"), {
+        format: "MM-DD-YYYY",
+      });
+      isAfterDate = new DateTime($("#isAfter"), {
+        format: "MM-DD-YYYY",
+      });
+      isAfterDateNew = new DateTime($("#isAfterNew"), {
+        format: "MM-DD-YYYY",
+      });
+      isBeforeDate = new DateTime($("#isBefore"), {
+        format: "MM-DD-YYYY",
+      });
+      isBeforeDateNew = new DateTime($("#isBeforeNew"), {
+        format: "MM-DD-YYYY",
+      });
+      isEqualDate = new DateTime($("#isEqual"), {
+        format: "MM-DD-YYYY",
+      });
+      isEqualDateNew = new DateTime($("#isEqualNew"), {
+        format: "MM-DD-YYYY",
+      });
+
+      allocationDatefilter = $("#allocation-date-filter1");
+      allocationDatefilterNew = $("#allocation-date-filterNew");
+      $("#allocation-date-filter1").select2();
+      $("#allocation-date-filterNew").select2();
+      $("#officeLocation").select2();
+      $("#ageChange").select2();
+
+      // Setup - add a text input to each footer cell
+      $("#example thead tr").clone(true).addClass("filters").appendTo("#example thead");
+
+      var dataTable = $("#example").DataTable({
+        orderCellsTop: true,
+        fixedHeader: true,
+        initComplete: function () {
+          var api = this.api();
+
+          // For each column
+          api
+            .columns()
+            .eq(0)
+            .each(function (colIdx) {
+              // Set the header cell to contain the input element
+              var cell = $(".filters th").eq(
+                $(api.column(colIdx).header()).index()
+              );
+              var title = $(cell).text();
+              $(cell).html('<input type="text" placeholder="' + title + '" />');
+
+              // On every keypress in this input
+              $(
+                "input",
+                $(".filters th").eq($(api.column(colIdx).header()).index())
+              )
+                .off("keyup change")
+                .on("change", function (e) {
+                  // Get the search value
+                  $(this).attr("title", $(this).val());
+                  var regexr = "({search})"; //$(this).parents('th').find('select').val();
+
+                  var cursorPosition = this.selectionStart;
+                  // Search the column for that value
+                  api
+                    .column(colIdx)
+                    .search(
+                      this.value != ""
+                        ? regexr.replace(
+                          "{search}",
+                          "(((" + this.value + ")))"
+                        )
+                        : "",
+                      this.value != "",
+                      this.value == ""
+                    )
+                    .draw();
+                })
+                .on("keyup", function (e) {
+                  e.stopPropagation();
+
+                  $(this).trigger("change");
+                  $(this)
+                    .focus()[0]
+                    .setSelectionRange(cursorPosition, cursorPosition);
+                });
+            });
+
+
+          $("<span class='fitler-icon'><a href='#' class='filter-refresh'><i class='fa fa-refresh' aria-hidden='true'></i></a><a href='javascript:void(0)' class='filter-date officetypefilter'><i class='fa fa-filter' aria-hidden='true'></i></a></span>").appendTo(".filters th:nth-child(3)")
+
+          $("<span class='fitler-icon'><a href='#' class='filter-refresh'><i class='fa fa-refresh' aria-hidden='true'></i></a><a href='javascript:void(0)' class='filter-date agetypefilter'><i class='fa fa-filter' aria-hidden='true'></i></a></span>").appendTo(".filters th:nth-child(4)")
+
+          $("<span class='fitler-icon'><a href='#' class='filter-refresh'><i class='fa fa-refresh' aria-hidden='true'></i></a><a href='JavaScript:void(0)' class='filter-date filter-date-al'><i class='fa fa-filter' aria-hidden='true'></i></a></span>").appendTo(".filters th:nth-child(5)");
+
+          $("<span class='fitler-icon'><a href='#' class='filter-refresh'><i class='fa fa-refresh' aria-hidden='true'></i></a><a href='JavaScript:void(0)' class='filter-date filter-date-dl'><i class='fa fa-filter' aria-hidden='true'></i></a></span>").appendTo(".filters th:nth-child(6)");
+        },
+      });
+
+      $("#allocation-date-filter1").on("change", function () {
+
+        // console.log("hi", allocationDatefilter.val());
+
+        var filterVal = allocationDatefilter.val();
+
+        if (filterVal === "equal") {
+          $("#minRl, #maxRl, #isAfter, #isBefore, #isNotEqual").parent().addClass("d-none");
+          $("#isEqual").parent().removeClass("d-none");
+        } else if (filterVal === "date range") {
+          $("#minRl, #maxRl, #isNotEqual, #isAfter, #isBefore, #isEqual").parent().addClass("d-none");
+          $("#minRl, #maxRl").parent().removeClass("d-none");
+        } else if (filterVal === "after or equal") {
+          $("#isEqual, #isAfter,#maxRl,#isBefore, #isNotEqual").parent().addClass("d-none");
+          $("#minRl").parent().removeClass("d-none");
+          $("#minRl").on("change", function () {
+            $(".date-range-custom").hide();
+          });
+        } else if (filterVal === "after") {
+          $("#isEqual, #maxRl, #minRl, #isBefore, #isNotEqual").parent().addClass("d-none");
+          $("#isAfter").parent().removeClass("d-none");
+        } else if (filterVal === "before or equal") {
+          $("#isEqual, #isAfter, #minRl, #isBefore, #isNotEqual").parent().addClass("d-none");
+          $("#maxRl").parent().removeClass("d-none");
+        } else if (filterVal === "before") {
+          $("#isEqual, #isAfter, #minRl,#maxRl, #isNotEqual").parent().addClass("d-none");
+          $("#isBefore").parent().removeClass("d-none");
+        }
+      });
+
+
+      // ================================
+
+      $("#allocation-date-filterNew").on("change", function () {
+        console.log("hi", allocationDatefilterNew.val());
+        var filterValNew = allocationDatefilterNew.val();
+        if (filterValNew === "equal") {
+          $("#minNewRl, #maxNewRl, #isAfterNew, #isBeforeNew").parent().addClass("d-none");
+          $("#isEqualNew").parent().removeClass("d-none");
+        } else if (filterValNew === "date range") {
+          $("#minNewRl, #maxNewRl, #isAfterNew, #isBeforeNew, #isEqualNew").parent().addClass("d-none");
+          $("#minNewRl, #maxNewRl").parent().removeClass("d-none");
+        } else if (filterValNew === "after or equal") {
+          $("#isEqualNew, #isAfterNew,#maxNewRl, #isBeforeNew").parent().addClass("d-none");
+          $("#minNewRl").parent().removeClass("d-none");
+          $("#minNewRl").on("change", function () {
+            $(".date-range-custom").hide();
+          });
+        } else if (filterValNew === "after") {
+          $("#isEqualNew, #maxNewRl, #minNewRl, #isBeforeNew").parent().addClass("d-none");
+          $("#isAfterNew").parent().removeClass("d-none");
+        } else if (filterValNew === "before or equal") {
+          $("#isEqualNew, #isAfterNew, #minNewRl, #isBeforeNew").parent().addClass("d-none");
+          $("#maxNewRl").parent().removeClass("d-none");
+        } else if (filterValNew === "before") {
+          $("#isEqualNew, #isAfterNew, #minNewRl,#maxNewRl").parent().addClass("d-none");
+          $("#isBeforeNew").parent().removeClass("d-none");
+        }
+
+      });
+
+      // Refilter the table
+      $("#minRl, #maxRl, #isAfter, #isBefore, #isEqual, #isNotEqual").on("change", function () {
+
+        $.fn.dataTable.ext.search.push(function (
+          settings,
+          data,
+          dataIndex
+        ) {
+          var minRl = MMDDYYFormat(minDateRl.val());
+          var maxRl = MMDDYYFormat(maxDateRl.val());
+          var isafter = MMDDYYFormat(isAfterDate.val());
+          var isBefore = MMDDYYFormat(isBeforeDate.val());
+          var isEqual = MMDDYYFormat(isEqualDate.val());
+          // var isNotEqual = MMDDYYFormat(isNotEqualDate.val());
+
+          var date = MMDDYYFormat(data[4]);
+          // Create a date object from a date string
+
+          console.log("hi", date, isBefore);
+
+          if (
+            (minRl === null && date <= maxRl) ||
+            (minRl <= date && maxRl === null) ||
+            (minRl <= date && date <= maxRl) ||
+            isafter < date ||
+            isBefore > date ||
+            isEqual === date
+            // (minRl === null &&  maxRl === null && isNotEqual !== date)
+          ) {
+            return true;
+          }
+          return false;
+        });
+        dataTable.draw();
+      }
+      );
+
+
+      $("#minNewRl, #maxNewRl, #isAfterNew, #isBeforeNew, #isEqualNew").on("change", function () {
+
+        $.fn.dataTable.ext.search.push(function (
+          newsettings,
+          data,
+          newdataIndex
+        ) {
+          var minNewRl = MMDDYYFormat(minDateNewRl.val());
+          var maxNewRl = MMDDYYFormat(maxDateNewRl.val());
+          var isafterNew = MMDDYYFormat(isAfterDateNew.val());
+          var isBeforeNew = MMDDYYFormat(isBeforeDateNew.val());
+          var isEqualNew = MMDDYYFormat(isEqualDateNew.val());
+          var date = MMDDYYFormat(data[5]);
+
+          if (
+            (minNewRl === null && date <= maxNewRl) ||
+            (minNewRl <= date && maxNewRl === null) ||
+            (minNewRl <= date && date <= maxNewRl) ||
+            isafterNew < date ||
+            isBeforeNew > date ||
+            isEqualNew === date
+          ) {
+            return true;
+          }
+          return false;
+        });
+        dataTable.draw();
+      }
+      );
+
+
+      // Office Location filter
+
+      $("#officeLocation").on("change", function () {
+
+        officeLocationfilter = $("#officeLocation");
+
+        // alert(officeLocationfilter)
+
+        $.fn.dataTable.ext.search.push(function (settings, data, dataIndex) {
+
+          var officeLocationfilterValue = officeLocationfilter.val();
+
+          if (officeLocationfilterValue.toLowerCase() == data[2].toLowerCase()) {
+
+            return true;
+          }
+
+          return false;
+        });
+        dataTable.draw();
+
+        $(".date-range-custom").hide();
+
+
+        officeLocationfilternew = $("#officeLocation").val();
+
+        if (officeLocationfilternew === 'All') {
+
+          $('.loading.page-loader').show();
+          window.location.reload()
+
+        }
+
+      });
+
+
+      $("#ageChange").on("change", function () {
+
+        var conceptName = $('#ageChange').find(":selected").val();
+
+        let ageChangeNew = $("#ageChange");
+
+        $.fn.dataTable.ext.search.push(function (settings, data, dataIndex) {
+
+          let ageChangeValue = ageChangeNew.val();
+
+          if (conceptName == '22') {
+
+            if (ageChangeValue == data[3]) {
+
+              return true;
+
+            }
+
+          } else if (conceptName == 'abovetwentytwo') {
+
+            return (22 < data[3]);
+
+          } else if (conceptName == 'belowtwentytwo') {
+
+            return (22 > data[3]);
+
+          } else if (conceptName == 'belowsixty') {
+
+            return (60 > data[3]);
+
+          } else if (conceptName == 'belowthirty') {
+
+            return (30 > data[3]);
+
+          } else {
+
+            return false;
+          }
+
+        });
+        dataTable.draw();
+
+        $(".date-range-custom").hide();
+
+        ageTypefilternew = $("#ageChange").val();
+
+        if (ageTypefilternew === 'All') {
+
+          $('.loading.page-loader').show();
+          window.location.reload()
+
+        }
+
+      });
+
+
+      $("#maxRl, #isafter, #isBefore, #isEqual,#maxNewRl, #isAfterNew, #isBeforeNew, #isEqualNew").on("change", function () {
+
+        $(".date-range-custom").hide();
+
+      });
+
+      $(document).on("click", ".filter-refresh", function () {
+
+        $('#min, #max, #maxNew, #minNew').val('');
+        window.location.reload()
+      });
+
+      $(".date-range-custom").on("click", function (event) {
+        event.stopPropagation(); // prevent click event from bubbling up
+      });
+
+
+      function MMDDYYFormat(dateParam) {
+
+        var formattedDate = null
+        if (dateParam) {
+          var date = new Date(dateParam);
+          // Get year, month, and day part from the date
+          var year = date.toLocaleString("default", {
+            year: "numeric"
+          });
+          var month = date.toLocaleString("default", {
+            month: "2-digit"
+          });
+          var day = date.toLocaleString("default", {
+            day: "2-digit"
+          });
+
+          // Generate mm-dd-yyyy date string
+          formattedDate = month + "/" + day + "/" + year;
+        }
+        return formattedDate;
+      }
+
+    });
+
+    $(document).on("click", ".filter-date-al", function () {
+      $('.date-range-al').toggle();
+    });
+
+
+    $(document).on("click", ".filter-date-dl", function () {
+      $('.date-range-dl').toggle();
+    })
+
+    $(document).on("click", ".officetypefilter", function () {
+      $('.office-filterChange').toggle();
+
+    })
+
+
+    $(document).on("click", ".agetypefilter", function () {
+      $('.age-range-al').toggle();
+
+    })
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
+  <script src="https://cdn.datatables.net/datetime/1.4.0/js/dataTables.dateTime.min.js"></script>
+</body>
+
+</html>

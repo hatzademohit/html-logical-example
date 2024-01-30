@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,700;1,100;1,300;1,400;1,500&display=swap'); 
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box; font-family: 'Roboto', sans-serif;  
+} 
+
+.group_blog {
+    border: 4px solid #000;
+    height: 100%;
+    padding: 20px 20px;
+    margin: 20px 20px;
+    overflow: hidden;
+    overflow-x: auto;
+} 
+ 
+.heading_upper {
+    font-size: 24px;
+    text-align: center;  
+    font-weight: 600;
+    margin-bottom: 30px; 
+} 
+
+.mx_attribute {display: flex; position: relative; margin-left: -45px;} 
+
+.iconState {
+    height: 60px;
+    width: 60px; position: relative; 
+    margin:0 auto 6px auto; 
+}
+
+.iconState img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+} 
+
+.ds_common {
+    width: 100%;
+    background: transparent;
+    max-width: 200px;
+    text-align: center;
+    position: relative;
+    min-width: 199px;
+    height: auto;
+}
+
+.ds_common.start_o {
+    height: max-content;
+} 
+
+.ds_common.start_o span.node_1 {
+    position: absolute;
+    height: 59.5px;
+    left: 50%;
+    width: 45%; 
+    display: block;
+    top: 105%;
+    z-index: 2;
+    border-left: 2px dashed #000;
+    border-bottom: 2px dashed #000;
+}
+  
+.status_text {
+    word-break: break-all;
+    padding: 0 18px 0 10px;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+    line-height: 1.4;
+}
+
+.ds_common.start_o .status_text {
+    padding: 0 30px;  
+    text-align: center; 
+}
+
+.status_text.nodeMaxText{
+    max-height: 35px; 
+}
+
+.node_step1 {
+    margin-top: 58px;
+    position: relative;
+}
+
+.node_step1 .iconState::before {
+    border-bottom: 2px dashed #000;
+    width: 115%;
+    position: absolute;
+    left: -130%;
+    top: 50%;
+    display: block;
+    height: auto;
+    content: "";
+} 
+
+.node_step1 .iconState::after {
+    content: "";
+    border-style: solid;
+    border-width: 6px 8px 6px 7px;
+    border-color: transparent transparent transparent #000;
+    margin: 0;
+    padding: 0;  
+    height: unset;
+    width: unset;
+    position: absolute;
+    left: -10px;
+    top: 43%;
+}
+
+.node_step1::before {
+    content: "";
+    border-left: 2px dashed #000;
+    position: absolute;
+    top: 31px;
+    left: -10px;
+    height: 100%;
+}
+
+/* .node_step1 .status_text {  
+    margin-bottom: 30px;
+} */  
+
+.node_step1 .ds_common.start_1:last-child::before {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 200%; 
+    width: 3px;
+    position: absolute;
+    left: -11px;
+    top: 32px;
+}
+
+.node_step1 .ds_common.start_1:first-child::before {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 200%; 
+    width: 3px;
+    position: absolute;
+    left: -11px;
+    top: 32px; display:none
+}
+
+.node_step1 .ds_common.start_1:not(:first-child) {
+    margin-top: 30px;
+}
+
+.node_step1 .ds_common.start_1 + .removable_W_space {
+    position: absolute;
+    left: -5%;
+    bottom: -106px;
+    background: #fff;
+    height: 100%;
+    width: 2px;
+}
+
+/*step2*/
+
+.node_step1.step2 {
+    margin-top: 117px;
+}
+
+/*node for next s line*/
+span.node_line_s {
+    position: absolute;
+    right: -100%;
+    top: 32px;
+    width: 100%;
+    height: auto;
+    border-top: 2px dashed #000;
+}
+
+.node_step1.step2 .ds_common.start_1 + .removable_W_space {
+    position: absolute;
+    left: -5%;
+    bottom: -162px; 
+    background: #fff;
+    height: 100%;
+    width: 2px;
+}
+
+/* step1 visible line s */
+
+.node_step1::after {
+    content: "";
+    background: #fff; 
+    height: 250%;
+    width: 10px;
+    display: block;
+    z-index: 0;
+    position: absolute;
+    left: -12px;
+}
+
+/*visible line in step2*/
+.node_step1.step2::after {
+    content: "";
+    background: #fff;
+    height: 200%;
+    width: 2px;
+    display: block;
+    z-index: 0;
+    position: absolute;
+    left: -10px;
+}
+
+/*node + node step3*/
+
+.node_step1.step2.step3_double{
+    margin-top: 190px;
+}
+
+.node_step1.step2.step3_single {
+    /* margin-top: 306px; */
+    margin-top: 384px;
+}
+
+.node_step1.step2.step3_single::before {
+    top: -27px;
+    height: 59px;
+} 
+
+
+/* for line 100s */
+.node_step1.step2.step3_single.line100s::before{
+    top: -27px;
+    height: 100%;
+}
+
+/*step4*/
+
+.node_step1.step2.step4_single {
+    margin-top: 368px;
+    margin-top: 508px;
+}
+
+
+/*one step up level css*/ 
+
+.node_step1.step2.oneStepUp {
+    margin-top: 0;
+} 
+
+.node_step1.step2.oneStepUp + .node_step1.step2.step3_single {
+    margin-top: 188px;
+}  
+
+/*one stepUp + one stepUP*/ 
+.node_step1.step2.oneStepUp + .node_step1.step2.step3_single.oneStepUp {
+    margin-top: 62px;
+}
+
+.node_step1.step2.step4_single::before {
+    top: -30px;
+    height: 62px;
+}
+
+.node_step1.step2.step4_single.line100s::before { 
+    top: -30px;
+    height: 100%;  
+}
+
+/*lg step4 line*/
+
+/* .node_step1.step2.step4_single span.node_line_s.alt_line.lg_step {
+    width: 160%;
+    left: auto;
+    right: -160%;
+} */
+
+/*step5*/
+.node_step1.step2.step4_single + .node_step1.step2.step4_single.step5 {
+    /* margin-top: 370px; */
+    margin-top: 510px;
+    margin-left: -20px;
+}
+
+.node_step1.step2.step4_single + .node_step1.step2.step4_single.step5::before {
+    display: none;
+}
+
+.node_step1.step2.step4_single + .node_step1.step2.step4_single.step5 .iconState::before {
+    width: 56px;
+    left: -104%;
+} 
+
+/*stpe6*/
+.node_step1.step2.step4_single + .node_step1.step2.step4_single.step5.step6 {
+    /* margin-top: 341.5px; */
+    margin-top: 483px;
+}
+
+/*step6 long line*/
+
+.node_step1.step2.step4_single.step5.step6 .iconState span.node_line_s.alt_line.lg_step {
+    content: "";
+    width: 355px;
+    right: auto; 
+    left: -327px;
+    top: -28px;
+}
+
+span.lineUp_rev_flow {
+    position: absolute;
+    top: 2px;
+    width: 355px;
+    height: 20px;
+    border-left: 2px dashed #000;
+    border-right: 2px dashed #000;
+    display: block;
+    left: -258px; 
+}
+
+span.arrow_rev {
+    content: "";
+    border-style: solid;
+    border-width: 6px 8px 6px 7px;
+    border-color: transparent transparent transparent #000;
+    margin: 0;
+    padding: 0;
+    height: unset;
+    width: unset;
+    position: absolute;
+    transform: rotate(90deg);
+    left: -265px;
+    right: auto;
+    top: 18px;
+}  
+
+.node_step1.step2.step4_single + .node_step1.step2.step4_single.step5.step6.finalStep7 {
+    margin-top: 460px;
+    margin-left: -56px;
+}
+
+.node_step1.step2.step4_single + .node_step1.step2.step4_single.step5.step6.finalStep7 span.arrow_rev {
+    display: none;
+}
+
+.node_step1.step2.step4_single + .node_step1.step2.step4_single.step5.step6.finalStep7 .iconState span.node_line_s.alt_line.lg_step {
+    top: 30px;
+    width: 231px;
+    left: -289px;
+}
+
+.node_step1.step2.step4_single + .node_step1.step2.step4_single.step5.step6.finalStep7 span.lineUp_rev_flow {
+    border-right: 0;
+    height: 48px;
+    top: 14px;
+    width: 290px;
+    left: -220px;
+} 
+
+/*as a child of final*/
+.childEstimate {
+    position: absolute;
+    /* right: -310px;  */
+    right: -160px;
+    bottom: -130px;
+}
+
+.childEstimate .node_step1.step2.step4_single.step5.step6.finalStep7 {
+    margin-top: 0;
+}
+
+.childEstimate .node_step1.step2.step4_single.step5.step6.finalStep7 span.arrow_rev {
+    display: none;
+}
+
+.childEstimate .node_step1.step2.step4_single.step5.step6.finalStep7 .iconState span.node_line_s.alt_line.lg_step {
+    /* top: 31px;
+    width: 216px;
+    left: -274px; */
+    top: 30px;
+    width: 70px;
+    left: -135px;
+}
+.childEstimate .node_step1.step2.step4_single.step5.step6.finalStep7 span.lineUp_rev_flow {
+    border-right: 0;
+    height: 56px;
+    top: -28px;
+    width: 290px;
+    /* left: -206px; */
+    left: -65px;
+}
+
+.childEstimate .node_step1.step2.step4_single.step5.step6.finalStep7::before {
+    display: none;
+}
+
+/*map statistic*/ 
+ 
+.map_statistics {
+    display: inline-flex;
+    border: 2px solid #aaaaaa;  
+    padding: 16px 16px 15px 16px;
+    margin-left: 25px;
+    margin-bottom: -5px;
+    margin-top: 125px;
+    min-width: 700px;
+    z-index: 99;
+    position: relative;
+    background: #fff;
+}
+ 
+.map_statistics .status_cl_text {
+    margin-left: 8px;
+    color: #000;
+    margin-right: 14px;  
+    padding-top: 19px;
+    font-size: 14px;
+}
+
+.map_statistics .status_cl_text.sm_top {
+    margin-top: -7px;
+}
+
+.stated_color {
+	height: 54px;
+	width: 54px;
+	display: block;
+	border-radius: 50%;
+}
+
+.stated_color.red{
+    background-color:#ed7036; 
+}
+
+.stated_color.yellow{
+    background-color:#ffc000; 
+}
+
+.stated_color.green{
+    background-color:#96b748; 
+}
+
+.stated_color.gray{ 
+    background-color:#84817d;  
+}
+
+.mx_container {
+	max-width: 1367px;
+	margin: 0 auto;
+	min-width: 1366px;
+	overflow: auto;
+} 
+
+.red_quote{
+    color:red;
+    font-style:italic;
+}
+
+span.r_word {
+    color: red;
+    font-style: italic;
+} 
+ 
+/* css added by mohit */
+.node_step1.brifSubmited{
+    margin-top: 191px;
+}
+.node_step1.brifSubmited .iconState{
+    margin-left: 0;
+}
+.node_step1.brifSubmited .iconState::before, .node_step1.brifSubmited::before{
+    display: none;
+}
+.node_step1.brifSubmited .ds_common{
+    min-width: 133px;
+    text-align: start;
+}
+.node_step1.brifSubmited .status_text{
+   padding: 0;
+   margin-left: -18px;
+}
+.node_step1.step2 .lastStep span.node_line_s{
+    display: none;
+}
+.step2.step3_single.node_step1.step4.step2::after {
+    border: 0;
+}
+.step2.step3_single.node_step1.step2::after {
+    border-left: 2px dashed #000000;
+    left: 189px;
+    top: 34px;
+}
+.node_step1.step2.step3_single.extrastep{
+    margin-top: 444px;
+}
+.info_label {
+    padding: 10px;
+    border: 2px dashed #000000;
+    width: fit-content;
+    position: absolute;
+    right: 35px;
+}
+.info_label div{
+    margin-bottom: 7px;
+}
+.info_label span {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 50%;
+}
+.info_label .vendor span{
+    background-color: #ed7036;
+}
+.info_label .admin span{
+    background-color: #ffc000;
+}
+.info_label .adminEcommerce span{
+    background-color: #96b748;
+}
+.info_label .adminEcommerceuser span{
+    background-color: #8c7f76;
+}

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo Code</title>
+</head>
+<body>
+	<select class="parent_filter_select2 pull-right" id="parent_filter_select2" multiple="multiple" name="select_project" style="width: 300px;">
+		<optgroup label="First Group">
+	        <option value="Option A">Option A</option>
+	        <option value="Option B">Option B</option>
+    	</optgroup>
+		<optgroup label="Second Group">
+	        <option value="Option C">Option C</option>
+	        <option value="Option D">Option D</option>
+	    </optgroup>
+	</select><br><br>
+	<!-- <input type="datetime-local"><br><br> -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
+	<script type="text/javascript">
+
+		$.fn.select2.amd.define('select2/selectAllAdapter', [
+		    'select2/utils',
+		    'select2/dropdown',
+		    'select2/dropdown/attachBody'
+		], function (Utils, Dropdown, AttachBody) {
+
+		    function SelectAll() { }
+		    SelectAll.prototype.render = function (decorated) {
+		        var self = this,
+		            $rendered = decorated.call(this),
+		            $selectAll = $(
+		                '<button class="btn btn-xs btn-default" type="button" style="margin-left:6px;"><i class="fa fa-check-square-o"></i> Select All</button>'
+		            ),
+		            $unselectAll = $(
+		                '<button class="btn btn-xs btn-default" type="button" style="margin-left:6px;"><i class="fa fa-square-o"></i> Unselect All</button>'
+		            ),
+		            $btnContainer = $('<div style="margin-top:3px;">').append($selectAll).append($unselectAll);
+		        if (!this.$element.prop("multiple")) {
+		            // this isn't a multi-select -> don't add the buttons!
+		            return $rendered;
+		        }
+		        $rendered.find('.select2-dropdown').prepend($btnContainer);
+		        $selectAll.on('click', function (e) {
+		            var $results = $rendered.find('.select2-results__option[aria-selected=false]');
+		            $results.each(function () {
+		                self.trigger('select', {
+		                    data: $(this).data('data')
+		                });
+		            });
+		            self.trigger('close');
+		        });
+		        $unselectAll.on('click', function (e) {
+		            var $results = $rendered.find('.select2-results__option[aria-selected=true]');
+		            $results.each(function () {
+		                self.trigger('unselect', {
+		                    data: $(this).data('data')
+		                });
+		            });
+		            self.trigger('close');
+		        });
+		        return $rendered;
+		    };
+
+		    return Utils.Decorate(
+		        Utils.Decorate(
+		            Dropdown,
+		            AttachBody
+		        ),
+		        SelectAll
+		    );
+
+		});
+
+		$('#parent_filter_select2').select2({
+		    placeholder: 'Select',
+		   dropdownAdapter: $.fn.select2.amd.require('select2/selectAllAdapter')
+		});
+	</script>
+	<!-- ======================== Lops =================== -->
+	<!-- <script>
+	// var ary1 = ['Rajesh' , 'Nilesh' , 'Naresh' , 'Rohit' , 'Mohit'];
+	// var ary2 = ['Nidhi' , 'Yashu' , 'Ayush' , 'Manshi'];
+	// var numberArray = [10 , 20 , 30 , 40]
+	// document.write("Default Array = " + ary1 + '<br>')
+	// document.write("Default Array = " + numberArray + '<br>')
+	// document.write('<h1>JavaScript Loop Start</h1>')
+	// While loop
+		// var a = 100;
+		// document.write('<ol>')
+		// 	while(a >= 1){
+		// 		document.write("<li>" + a + ") Hello Team</li>");
+		// 		a--
+		// 	}
+		// document.write('<ol>')
+
+
+	// DO while loop
+		// var a = 100;
+		// do{
+		// 	document.write(a + ') Hello Team<br>')
+		// 	a--
+		// }while(a >= 1)
+
+
+	// For loop
+		// for(var a = 1; a <= 10; a++){
+		// 	document.write(a + ') Hello Team<br>')
+		// }
+
+	// Continue and Break Statment
+		// for(var a = 1; a <= 10; a++){
+		// 	if(a == 3){
+		// 		document.write(a + ') Hello Mohit<br>')
+		// 		continue;
+		// 	}
+		// 	document.write(a + ') Hello Team<br>')
+		// }
+
+	// Even and Odd Number
+
+		// let even = 0;
+		// let odd = 0;
+		// let sum = 0;
+		// for(var a = 1; a <= 100; a++){
+		// 	if(a % 2 == 0){
+		// 		document.write(a + ') Even Number<br>');
+		// 		even += a;
+		// 	}else{
+		// 		document.write(a + ') Odd Number<br>');
+		// 		odd += a;
+		// 	}
+		// 	sum += a;
+		// }
+		// console.log(even , odd , sum);
+
+
+	// Nested loop
+
+		// for(var a = 1; a <= 100; a = a + 10){
+		// 	// document.write(a + " ")
+		// 	for(var b = a; b < a+10; b++){
+		// 		document.write(b + " ")
+		// 	}
+		// 	document.write("<br>")
+		// }
+
+	// forEach loop
+	// ary1.forEach(printFunction)
+
+	// function printFunction(value, index){   // forEach loop simple return the all data present in array
+	// 	document.write('Index of array ' + index + ' and value of array ' + value + '<br>')
+	// }
+
+
+	// document.write('<h1>JavaScript Arrys method Start</h1><br>')
+	// Arrys
+		// var ary = [10,20,30,40,50,60,70,80,90,100]
+		// document.write('<ul>')
+		// for(var a = 0; a <= 9; a++){
+		// 	document.write("<li>Index of " + ary[a]  + " is " + a + "</li>" )
+		// }
+		// document.write('</ul>')
+
+	// Multi Dimentional Arrys
+		// var arys = [
+		// 	['Mohit' , '23' , 'UI Developeer' , 'Male'],
+		// 	['Rohit' , '25' , 'Farmer' , 'Male'],
+		// 	['Navin' , '27' , 'UI Developeer' , 'Male'],
+		// 	['Rajesh' , '30' , 'Farmer' , 'Male'],
+		// 	['Naresh' , '30' , 'Farmer' , 'Male'],
+		// ];
+		// document.write('<table border="1px" style="border-collapse: collapse;" cellpadding="5">');
+		// 	for(var a = 0; a < arys.length; a++){
+		// 		document.write('<tr>')
+		// 		for(var b = 0; b < arys[a].length; b++){
+		// 			document.write('<td>' + arys[a][b] + '</td>');
+		// 			// document.write(' &nbsp;')
+		// 		}
+		// 		document.write('</tr>')
+		// 	}
+		// document.write('<table>');
+
+	// Delete Arrys Element
+ 		// var ary = [10,20,30,40,50,60,70,80,90,100]
+		//  delete ary[1];  // Delete method
+		// document.write('<ul>')
+		// for(var a = 0; a <= 9; a++){
+		// 	document.write("<li>Index of " + ary[a]  + " is " + a + "</li>" )
+		// }
+		// document.write('</ul>')
+
+	// Arrys Method
+		// Sort Method
+		// ary1.sort();   // Sort method align array element alphabetes order
+		// document.write("Sorting Array = " + ary1 + '<br>' )  	// With sort effect
+
+		// Reverse Method
+		// ary1.reverse();  // Array Reverse Method
+		// document.write("Reverse Array = " + ary1 + '<br>' )	// With Reverse effect
+
+		// Pop Method
+		// ary1.pop();  // Array pop Method remove last element of the array
+		// document.write("Pop Array = " + ary1 +  '<br>' )		// With pop effect
+
+		// Push Method
+		// ary1.push("Ayush" , "ABC");  // Array Push Method add the element last of array
+		// document.write("Push Array = " + ary1 +  '<br>' )		// With push effect
+
+
+		// shift Method
+		// ary1.shift();  // Array shift Method remove first element of the array
+		// document.write("Shift Array = " + ary1 + '<br>' )		// With shift effect
+
+		// unshift Method
+		// ary1.unshift("Ayush" , "ABC");  // Array unshift Method add the element first of array
+		// document.write("Unshift Array = " + ary1 +  '<br>' )		// With unshift effect
+
+		// Concat Method
+		// ary3 = ary1.concat(ary2);  // Array concat Method mearch tow are more array and made a new array
+		// document.write("Concat Array = " + ary3 +  '<br>' )		// With concat effect
+
+		// Join Method
+		// ary3 = ary1.join(' ');  // Array Join Method join two are more array to each other and give a new string
+		// document.write("Join Array = " + ary3 +  '<br>' )		// With join effect
+
+		// Slice method
+		// ary3 = ary1.slice(1 , 3);  // Array Slice Method giva a to index value first starting index and second is end index and output is new array and given the index array
+		// document.write("Slice Array = " + ary3 +  '<br>' )		// With Slice effect
+
+		// Splice Method
+		// splice(index, delete('how many index delete or not is optional') , 'add new value');
+		// ary1.splice(0, 0 , 'Hatzade' , 'Kapgate');  // Array splice Method Add the value to the array and print array
+		// ary1.splice(0, 2 , 'Hatzade' , 'Kapgate');  // Array splice Method Add the value to the array and print array and also deted the index number on array given in example
+		// document.write("Splice Array = " + ary1 +  '<br>' )		// With splice effect
+
+		// isArray Method
+		// ary3 = Array.isArray(ary1)  // Check is an array or not a array
+		// document.write("isArray Array = " + ary3 +  '<br>' )		// With isArray effect
+
+		// IndexOf Method
+		// ary3 = ary1.indexOf('Rohit')  // Check the number of index this given by you and given value is not define in array that condition return (-1)
+		// document.write("indexOf Array = " + ary3 +  '<br>' )		// width lastIndexOf effect
+
+		// lastIndexOf Method
+		// ary3 = ary1.lastIndexOf('Rohit')	// Same as index of method but it's start fiding the value end of the array
+		// document.write("lastIndexOf Array = " + ary3 +  '<br>' )	// with lastIndexOf effect
+
+		// includes Method
+		// ary3 = ary1.includes('Rajesh')	// givven value search in array and return true or false
+		// document.write("includes Array = " + ary3 +  '<br>' )	// with includes effect
+
+		// some Method
+		// ary3 = ary1.some(checkedValue)	// the condition is true only in one condition this time fuction is call
+		// function checkedValue(value){
+		// 	return value == "Rohit"
+		// }
+		// document.write("includes Array = " + ary3 +  '<br>' )	// with some effect
+
+		// every Method
+		// ary3 = numberArray.every(checkedValue)	// the condition is true in all time this time fuction is call
+		// function checkedValue(value){
+		// 	return value <= 40;
+		// }
+		// document.write("includes Array = " + ary3 +  '<br>' )	// with every effect
+
+		// Find method
+		// ary3 = numberArray.find(conditionTruethValue)	// find method returns the value of the first element that pass the test
+		// function conditionTruethValue(value){
+		// 	return value > 30;
+		// }
+		// document.write("Find Array = " + ary3 +  '<br>' )	// with find effect
+
+		// FindIndex method
+		// ary3 = numberArray.findIndex(conditionTruethValue)	// findindex method returns the index number of the first element that pass the test
+		// function conditionTruethValue(value){
+		// 	return value == 40;
+		// }
+		// document.write("Find Array = " + ary3 +  '<br>' )	// with findindex effect
+
+		// filter Method
+		// ary3 = numberArray.filter(conditionTruethValue)			// Same as a find method but it return all the value that pass the test
+		// function conditionTruethValue(value){
+		// 	return value >= 10;
+		// }
+		// document.write('Filter Array = ' + ary3 + '<br>')
+
+		// toString Method
+		// var ary3 = ary1.toString();		// toString method conver array to string
+		// document.write('toString Arry = ' + ary3 + '<br>');
+		// console.log(ary3)		// With toString effect
+
+		// valueOf Method
+		// var ary3 = ary1.valueOf();		// valueOf method it a default function return all array value
+		// document.write('valueOf Arry = ' + ary3 + '<br>');	// With valueOf effect
+
+		// fill Method
+		// var ary3 = ary1.fill('Mohit');		// fill all the value is given
+		// document.write('valueOf Arry = ' + ary3 + '<br>');		// With fill effect
+
+		// map methods
+		// var b = numberArray.map(test);
+		// document.write(b + '<br>');			// With map method
+		// function test(x){
+		// 	return x * 10;
+		// };
+		// var aryofObj = [
+		// 	{fname : 'Mohit' , lName : 'Hatzade'},
+		// 	{fname : 'Rohit' , lName : 'Hatzade'},
+		// 	{fname : 'Ayush' , lName : 'Hatzade'}
+		// ];
+		// var newaryofObj = aryofObj.map(newFuction);
+		// function newFuction(n){
+		// 	return n.fname + ' ' + n.lName ;
+		// }
+
+		// document.write(newaryofObj)			// With map method
+
+	// document.write('<h1>JavaScript Objects Start</h1>');
+		// 	What is object
+		// 		I) Objects in a advance version
+		// 		II) In Object used curly brakects ({})
+		// 		III) In object uesd a propery
+		// 		IV) In Object array is allow as a property
+		// 		V) Allow multiple function (Add multiple fuction in one object)
+		// 		VI) Object allow object
+
+		// 	var obj1 = {
+		// 	fname : 'Mohit',
+		// 	lname : 'Hatzade',
+		// 	age : 23,
+		// 	designation : 'UI Developer',
+		// 	hobbies : ['Sleeping' , 'Learn New Skill' , 'Make a responsive web site and user satisfaction'],
+		// 	fullName : function(){
+		// 		return this.fname + ' ' + this.lname;
+		// 	}
+		// };
+		// document.write('My First Name is ' + obj1.fname + ' and my last name is ' + obj1.lname + '<br>')
+		// document.write(obj1.fullName());
+
+		// Creating Object second method
+			// First declare the varibale and give the value new Object();
+			// Assign the value of object fallowing method
+				//  Fist give variable name that is EX. a.firstName = 'Ram'
+				// Upper Example a is a variable name and firstName is a property and Ram is a value
+			// Learn By example
+			// var newObject = new Object();
+
+			// newObject.firstName = 'Mohit',
+			// newObject.lName = 'Hatzade',
+			// newObject.age = 23,
+			// newObject.workPlace = 'Valethi technology LLP Nagpur',
+			// document.write(newObject.firstName + '<br>');
+			// newObject.designation = 'UI Developer At valethi technology Nagpur',
+			// //  Following two methods are accepted in JavaScript to print a Object
+			// document.write(newObject['designation'] + '<br>');
+			// document.write(newObject.designation);
+
+		// Arryas of Objects
+			// Object uesd in array
+			// learn fallowing array example
+
+			// var example = [
+			// 	{name : 'Mohit' , age : 23},
+			// 	{name : 'Rohit' , age : 25},
+			// 	{name : 'Rajesh' , age : 30},
+			// ];
+			// // document.write(example + '<br>')
+			//
+			// for (let index = 0; index < example.length; index++) {
+			// 	document.write(example[index].name + "-" + example[index].age + '<br>')
+			// }
+
+		// Use Constant variable with the help of object and arrays
+		//  In constant variable value do not change but in case on arrys and object changed the specific value of the constant variable find a specific index number or properties and changed the value of the const variable
+		//  See the following example for understanding
+		// 1) Arrays
+			// const ary = [20, 30, 40];
+			// We con't assign Constant varible value to reassign but you find the specific index no and assign the value of that
+			//  See the Following example and understand it
+			// ary[1] = 50
+			// console.log(a)
+
+		// 2) Objects
+			// const ary = {
+			// 	name : 'Mohit',
+			// 	age : 23,
+			// };
+			// console.log(ary);
+			// ary.name = 'Rohit';
+			// ary.age = 25;
+			// console.log(ary);
+
+		// For in loop
+			// I) Is uesd for print a object
+			// var obj = {
+			// 	firstName : 'Mohit',
+			// 	lastName : 'Hatzade',
+			// 	age : 23,
+			// 	address : 'Koka'
+			// };
+			// for (var objValue in obj){
+			// 	document.write(objValue + ' : ' + obj[objValue] + '<br>')
+			// }
+
+		// String Methods
+			// document.write('<h1>JavaScript String method Start</h1><br>')
+			var str1 = 'I am a UI developer at valethi technology Nagpur';
+			var str2;
+			// document.write(str1 + '<br>');
+			// length its not a method it's a string property
+			str2 = str1.length;	// length property find string length including spaces
+			// document.write('Find Length: ' + str2 + '<br>');
+
+			// toLowerCase method
+			str2 = str1.toLowerCase();		// In toLowerCase method string convert in lower case
+			// document.write('toLowerCase: ' + str2 + '<br>');
+
+			// toUpperCase method
+			str2 = str1.toUpperCase();		// In toupperCase method string convert in upper case
+			// document.write('toUpperCase: ' + str2 + '<br>');
+
+			// includes method
+			str2 = str1.includes('nagpur');		// In includes method search the given text and return true of false
+			// document.write(str2 + '<br>');
+
+			// startsWith method
+			str2 = str1.startsWith('I am');		// In startsWith method search the given text at start of the string and return true or false
+			// document.write(str2 + '<br>');
+
+			// endsWith method
+			str2 = str1.endsWith('Nagpur');		// In endsWith method search the given text at end of the string and return true or false
+			// document.write(str2 + '<br>');
+
+			// search method
+			str2 = str1.search('I');		// In search method search the given text at the string and return the index number
+			// document.write(str2 + '<br>');
+
+			// match method
+			str2 = str1.match(/a/g);		// In match method search element and return the array
+			// document.write(str2 + '<br>');
+
+			// indexOf method
+			str2 = str1.indexOf('am');		// In indexOf method search element at start of the string and return the searching item index number
+			// document.write(str2 + '<br>');
+
+			// lastIndexOf method
+			str2 = str1.lastIndexOf('t');	// In lastIndexOf method search element at last of the string and return the searching item index number
+			// document.write(str2 + '<br>');
+
+			// replace method
+			str2 = str1.replace('UI' , 'Softwear');		// In replace method replace the given world with given world
+			// document.write(str2 + '<br>');
+
+			// trim method
+			str2 = str1.trim();		// In trim method Remove extra space in string and return the string
+			// document.write(str2 + '<br>');
+
+			// charAt method
+			str2 = str1.charAt(10);		// In charAt method find the given index number and ruturn the text
+			// document.write(str2 + '<br>');
+
+			// charCodeAt method
+			str2 = str1.charCodeAt(10);		// In charCodeAt method find the given index number and ruturn chart code number
+			// document.write(str2 + '<br>');
+
+			// fromCharCode method
+			str2 = String.fromCharCode(90);		// In fromCharCode method ruturn the given code symbole
+			// document.write(str2 + '<br>');
+
+			// concat method
+			str3 = 'Hello '
+			str2 = str3.concat(str1);		// In concat method add the two or multiple string and return new string
+			// document.write(str2 + '<br>');
+
+			// split method
+			str2 = str1.split(' ');		// In split method break string then remove string and return new array
+			// document.write(str2 + '<br>');
+
+			// repeat method
+			str2 = str1.repeat(2);		// In repeat method repeat the string
+			// document.write(str2 + '<br>');
+
+			// slice method
+			str2 = str1.slice(2 , 5);		// In slice given index number and return new string
+			// document.write(str2 + '<br>');
+
+			// substr method
+			str2 = str1.substr(8 , 5);		// In substr given index number and repeat the next index number
+			// document.write(str2 + '<br>');
+
+			// substring method
+			str2 = str1.substring(8 , 5);		// same as slice
+			// document.write(str2 + '<br>');
+
+			// toString method
+			var num = 50;
+			str2 = num.toString();		// In toString method numaric value conver tho string
+			// document.write(str2 + 10 + '<br>');
+
+			// valueOf method
+			str2 = str1.valueOf();		// In valueOf method it's a default function of string
+			// document.write(str2 + '<br>');
+
+
+		// Numbers Methods
+			// document.write('<h1>JavaScript Numbers method Start</h1><br>')
+			
+			// Number method
+			// num1 = false,
+			// num = Number(num1);
+			// document.write(num)
+
+			// parseInt method
+			// num1 = '20.60',
+			// num = parseInt(num1);
+			// document.write(num)
+
+			// parseFloat method
+			// num1 = '20.60',
+			// num = parseFloat(num1);
+			// document.write(num)
+
+			// isFinite method
+			// num1 = '20.60',
+			// num = Number.isFinite(num1);
+			// document.write(num)
+
+			// isInteger method
+			// num1 = '2060',
+			// num = Number.isInteger(num1);
+			// document.write(num)
+
+			// toFixed method
+			// num1 = 5.2585,
+			// num = num1.toFixed(2);
+			// document.write(num)
+
+			// toPrecision method
+			// num1 = 5.6528
+			// num = num1.toPrecision(2);
+			// document.write(num)
+
+		// date Methods
+			document.write('<h1>JavaScript date method Start</h1><br>')
+	</script> -->
+</body>
+</html>
