@@ -1,0 +1,465 @@
+@font-face {
+    font-family: 'kyn',
+        sans-serif;
+    src: url("./fonts/Kyn-Light.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* All colors need updaing with API fetched theme */
+
+body {
+    font-size: 1rem;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-family: 'kyn',
+        sans-serif;
+}
+
+header {
+    font-family: 'kyn',
+        sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 28px;
+    text-align: center;
+}
+
+footer {
+    font-family: 'kyn', sans-serif;
+    align-items: stretch;
+}
+
+.main-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    font-family: 'kyn',
+        sans-serif;
+}
+
+.left-panel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    height: 100%;
+    padding: 0 4rem;
+    width: 600px;
+    margin: auto;
+
+    @media (min-width: 1600px) {
+        padding: 0 8rem;
+    }
+}
+
+.left-panel-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    background-color: white;
+    height: 100%;
+    margin: auto;
+    width: 400px;
+    align-items: stretch;
+
+    @media (max-width: 400px) {
+        width: 352px;
+    }
+}
+
+.image-container {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* background-position: top; */
+    background-size: cover;
+    background-image: url('../img/background.png');
+    @media (max-width: 900px) {
+        width: 0px;
+    }
+}
+
+
+.reset-username-info-container {
+    display: flex;
+    padding: 1rem;
+    border-radius: 4px;
+    background: rgb(240, 240, 240);
+    margin-bottom: 2rem;
+}
+
+.reset-username-info-item {
+    width: 50%;
+    align-self: flex-start;
+}
+
+.reset-username-info-label {
+    font-size: 0.7rem;
+    width: 50%;
+    color: darkgrey
+}
+
+/* COMMON CLASSES */
+
+.text-input-container {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 0.3rem;
+}
+
+.text-padding {
+    padding: 0.6rem !important;
+}
+
+.text-input {
+    padding: 1rem;
+    font-family: 'kyn', sans-serif;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    outline-color: #7b33d9;
+}
+
+.button-primary1 {
+    font-family: 'kyn', sans-serif;
+    font-size: 1rem;
+    width: 91%;
+    background: #000000e3;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        background: grey;
+    }
+
+    &[enabled] {
+        background-color: grey;
+    }
+}
+
+.button-primary {
+    font-family: 'kyn', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    background: black;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    transition: 0.15s;
+    margin: 1rem 0;
+    cursor: pointer;
+
+    &:hover {
+        background: grey;
+    }
+
+    &[disabled] {
+        background-color: grey;
+    }
+}
+
+.button-link-container {
+    display: flex;
+    width: 100%;
+}
+
+.button-link-primary {
+    font-family: 'kyn',
+        sans-serif;
+    width: 100%;
+    background: black;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    transition: 0.15s;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+        background: grey;
+    }
+}
+
+.button-link-filled-secondary {
+    font-family: 'kyn',
+        sans-serif;
+    width: 100%;
+    background: lightgrey;
+    color: black;
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    transition: 0.15s;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+        background: rgb(230, 230, 230);
+    }
+}
+
+.button-link-secondary {
+    font-family: 'kyn',
+        sans-serif;
+    width: 100%;
+    background: none;
+    color: black;
+    border: 1px solid darkgrey;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.15s;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.button-link-text {
+    font-family: 'kyn',
+        sans-serif;
+    color: #7b33d9;
+    align-self: flex-end;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+.button-link-text:hover{
+    text-decoration: underline;
+}
+
+.error-text {
+    display: block;
+    color: #e73434;
+    margin-top: 0.25rem;
+    font-size: 14px;
+}
+
+.sub-text {
+    font-size: 0.8rem;
+}
+
+.checkbox-input {
+    position: absolute;
+    opacity: 0;
+
+    &+label {
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    &+label:before {
+        content: '';
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: text-top;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #000000;
+        border-radius: 4px;
+        position: relative;
+        top: -3px;
+    }
+
+    &:focus+label:before {
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+    }
+
+    &:checked+label:before {
+        background: rgb(100, 100, 100);
+    }
+
+    &:checked+label:after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 9px;
+        background: white;
+        width: 2px;
+        height: 2px;
+        box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+        transform: rotate(45deg);
+    }
+}
+
+.exchange div {
+    position: relative;
+    top: 10px;
+}
+
+.exchange img {
+    margin-bottom: 6px;
+    width: 50%;
+}
+
+.exchange p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    display: flex;
+    align-items: flex-end;
+    color: #000000;
+}
+.exchange h4 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 14px;
+    display: flex;
+    align-items: flex-end;
+    color: rgb(0, 0, 0);
+    margin: 10px 0;
+}
+
+.exchange {
+    margin-top: 35px;
+    position: unset;
+    bottom: 40px;
+    left: 40px;
+    margin-bottom: 15px;
+}
+
+.logo {
+    text-align: center;
+    margin: 30px auto 35px;
+    width: 300px;
+}
+
+.register-logo {
+    text-align: center;
+    margin: 7px 104px 21px 270px;
+    width: 350px;
+}
+
+.register-main {
+    width: 900px;
+    margin-top: 20px;
+}
+
+.button {
+    float: right;
+    margin: 67px -92px 100px 20px;
+}
+
+.errortext {
+    border-width: 3px;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: lightgrey;
+    font-size: 14px;
+    font-family: 'kyn', sans-serif;
+    border: 1px solid black;
+    margin: 2px 0px 11px -1px;
+}
+
+.img-css {
+    width: 30px;
+    margin-top: 13px;
+    margin-left: -11px;
+}
+
+.logout_Txt {
+    padding: 23px 0;
+    text-align: center;
+    min-height: 38vh;
+}
+
+.logout_Txt p {
+    margin: 0 0 30px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+}
+
+.logout_Txt span {
+    margin: 0;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+}
+
+.logout_Txt span a {
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    text-decoration: underline;
+}
+
+.password_eye {
+    position: relative;
+}
+
+.password_eye i.fas {
+    position: absolute;
+    right: 0;
+    top: 24%;
+    right: 20px;
+    cursor: pointer;
+    z-index: 99;
+    background: transparent;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa,
+.far,
+.fas {
+    font-family: "Font Awesome 5 Free"
+}
+
+.fa,
+.fas {
+    font-weight: 900
+}
+
+.fa,
+.fab,
+.fad,
+.fal,
+.far,
+.fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.fa-eye-slash:before {
+    content: "\f070";
+}
+
+.fa-eye:before {
+    content: "\f06e";
+}
