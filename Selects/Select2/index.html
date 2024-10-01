@@ -19,7 +19,7 @@
       <option>ASD</option>
     </select>
     <!-- Do not use same ID for select (ID is uniq) -->
-    <select name="" class="cust-select" id="selct2">
+    <select name="" class="cust-select" id="HA_popup_department">
       <option>ABC</option>
       <option>XYZ</option>
       <option>ASD</option>
@@ -39,6 +39,7 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
       $(".cust-select").select2();
+      $("#HA_popup_department").prop("disabled", true);
     </script>
   </body>
 </html>

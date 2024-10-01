@@ -21,10 +21,10 @@
                     <td>Mohit</td>
                     <td>
                         <select name="name" class="multiselect d-none" multiple="multiple">
-                            <option>Name</option>
-                            <option>Sirname</option>
-                            <option>Village</option>
-                            <option>District</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
                         </select>
                     </td>
                 </tr>
@@ -42,7 +42,22 @@
         includeSelectAllOption: true,
         enableFiltering: true,
         maxHeight: 250,
-        buttonContainer: '<body />'
+        // buttonContainer: '<body />',
+        onDropdownShown: function(e) {
+            // $(e.target).css('color',  'red');
+            var buttonPosition = $('.dropdown-toggle').offset();
+            var top = buttonPosition.top
+            var left = buttonPosition.left
+            setTimeout(() => {
+                $('.multiselect-container').css({
+                    top: top + 37,
+                    left: left,
+                    position: 'fixed',
+                    transform: 'unset'
+                })
+            });
+            console.log(top , " " , left)
+        }
     });
 </script>
 </body>

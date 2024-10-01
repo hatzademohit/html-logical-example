@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+
+	<style>
+		.product-range-slider {
+			width: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+		.product-range-slider .slider-box h2 {
+			margin: 0 0 30px;
+			position: relative;
+			top: -30px;
+			left: -30px;
+		}
+		.product-range-slider .slider-box {
+			margin: 0 12px;
+			border-radius: 30px;
+			padding: 30px;
+			position: relative;
+		}
+		.product-range-slider .slider-box:before {
+			content: '';
+			height: calc(100% - 65px);
+			display: block;
+			background-color: #ffffff;
+			position: absolute;
+			z-index: -1;
+			border-radius: 30px;
+			left: 0;
+			right: 0;
+			top: auto;
+			bottom: 0;
+			transition: 0.5s;
+		}
+		.product-range-slider .slider-box:hover:before {
+			height: 100%;
+		}
+		.product-range-slider .slider-box:hover h2 {
+			position: relative;
+			top: 10px;
+			left: 0;
+		}
+		.product-range-slider img {
+			display: block;
+			margin: auto;
+			height: 217px;
+			width: 100%;
+			max-width: 100%;
+			object-fit: contain;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="product-range-slider">
+		<div class="slider slick-carousel">
+			<div class="slider-box">
+				<h2>Neutral</h2>
+				<div>
+					<img src="./neutral.png" alt="neutral-img">
+					<p>
+						Copenhagen-based apparel leader supplying sustainable off-the-shelf and Brand-On-Demand products
+						to B2B
+						market.'Certified Responsibility' labeling and international sustainability standards across the
+						supply
+						chain
+					</p>
+					<a href="#" class="btn btn-slider-button">Explore our neutral product</a>
+				</div>
+			</div>
+			<div class="slider-box">
+				<h2>Heritage</h2>
+				<div>
+					<img src="./heritage.png" alt="heritage-img">
+					<p>
+						High-quality and soft RPET fabric, easy to remove all dust and dirt. It can be used on any
+						delicate
+						surface, such as LCD TV screens, smart phones, camera lenses and filters. It can be stored in
+						the laptop
+						case.
+					</p>
+					<a href="#" class="btn btn-slider-button">Explore our heritage product</a>
+				</div>
+			</div>
+			<div class="slider-box">
+				<h2>Drinkware</h2>
+				<div>
+					<img src="./drinkware.png" alt="drinkware-img">
+					<p>
+						Ecoffee Cup - Sustainable, reusable cups made from natural fiber, corn starch, and resin. BA,
+						BPS, and
+						phthalate-free. Features a matte silicone lid and sleeve for hot liquids, sourced from
+						sustainably managed
+						bamboo in Zhejiang, China.
+					</p>
+					<a href="#" class="btn btn-slider-button">Explore our drinkware product</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<script>
+		$('.slick-carousel').slick({
+			infinite: true,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			arrows: true,
+			dots: true,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						infinite: true,
+						dots: true
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
+		});
+	</script>
+</body>
+
+</html>
