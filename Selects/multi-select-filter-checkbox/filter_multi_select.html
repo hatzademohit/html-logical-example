@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Filter Multi Select Plugin Examples</title>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/darkly/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    
+    <!-- Load jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Load the plugin bundle. -->
+    <link rel="stylesheet" href="./filter_multi_select.css">
+    <script src="./filter-multi-select-bundle.min.js"></script>
+
+        <div class="container">
+            <div class="form-group row">
+                <label class="col-2 col-form-label" for="animals">Animals</label>
+                <div class="col-10">
+                    <select multiple name="animals" id="animals">
+                        <option value="bear">Bear</option>
+                        <option value="ant">Ant</option>
+                        <option value="salamander">Salamander</option>
+                        <option value="owl">Owl</option>
+                        <option value="frog">Frog</option>
+                        <option value="shark">Shark</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    <script>
+            $('#animals').filterMultiSelect(); 
+    </script>
+   
+</body>
+
+</html>
