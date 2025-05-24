@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome User</title>
 
     <style>
         * {
@@ -30,14 +30,31 @@
                             <tr>
                                 <td
                                     style="padding-top: 10px;padding-bottom: 10px;padding-left: 20px;padding-right: 20px;">
-                                    <p style="font-size: 22px; font-weight: bold; color: #000000; margin: 0;">{{$user->name}},</p>
+                                    <p style="font-size: 22px; font-weight: bold; color: #000000; margin: 0;">Welcome
+                                        {{$user->name}},</p>
                                 </td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td
                                     style="padding-top: 10px;padding-bottom: 10px;padding-left: 20px;padding-right: 20px;">
                                     <p style="font-size: 20px; font-weight: bold; color: #000000; margin: 0;">
                                         Please Verify Your Email Address
+                                    </p>
+                                </td>
+                            </tr> -->
+                            <tr>
+                                <td
+                                    style="padding-top: 10px;padding-bottom: 10px;padding-left: 20px;padding-right: 20px;">
+                                    <p
+                                        style="font-size: 18px; font-weight: bold; color: #8c8686; margin: 0;margin-bottom: 10px;">
+                                        Email Address : {{ email_address }}
+                                    </p>
+                                    <p
+                                        style="font-size: 18px; font-weight: bold; color: #8c8686; margin: 0;margin-bottom: 10px;">
+                                        User Name : {{ username }}
+                                    </p>
+                                    <p style="font-size: 18px; font-weight: bold; color: #8c8686; margin: 0;">
+                                        Password : {{ password }}
                                     </p>
                                 </td>
                             </tr>

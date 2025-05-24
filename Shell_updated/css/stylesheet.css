@@ -1,0 +1,488 @@
+
+
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;}
+
+body{
+    background: #f3f3f3;
+}
+
+
+.information-wrap{
+    max-width: 982px;
+    margin: 0 auto;
+    padding-top: 63px;
+}
+.information-wrap h1{
+    font-family: Arial;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 39.1px;
+    color: #514E4E;
+    text-align: center;
+}
+.information-wrap p.title{
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.4px;
+    text-align: center;
+    color: #514E4E;
+}
+
+.information-wrap.howTo-order{
+    max-width: 759px;
+}
+
+.howTo-order-accordian .card{
+    text-align: center;
+    border: 0;
+    border-radius: 0 !important;
+}
+
+.howTo-order-accordian .card-body{
+    padding-top: 0;
+    padding-bottom: 34px;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: 700 !important;
+    line-height: 18.4px;
+    text-align: center;
+    color: #514E4E;
+    
+}
+
+.howTo-order-accordian .card-header{
+    text-align: center;
+    border: 0;
+    background-color: transparent;
+    border-top: 1px solid #979797;
+}
+
+.howTo-order-accordian .card-header:first-child {
+    border-radius: unset;
+}
+
+.howTo-order-accordian .card-head{
+    text-align: center;
+    border: 0;
+    background-color: transparent;
+    border-top: 1px solid #979797 !important;
+    cursor: pointer;
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+    
+}
+
+.information-wrap.payment-wrap{
+    max-width: 1178px;
+}
+
+.information-wrap.faq-wrap{
+    max-width: 783px;
+}
+
+.information-wrap.terms-conditons{
+    max-width: 669px;
+}
+
+.information-wrap.comming-soon{
+    max-width: 1240px;
+}
+
+.have-question-wrap-div{
+    max-width: 1584px;
+    margin:  auto;
+}
+
+
+.custom-contact-inner {
+    gap: 39px;
+    /* padding-left: 168px;
+    padding-right: 168px; */
+}
+
+.custom-contact p{
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27.6px;
+    text-align: left;
+    color:#514E4E;
+}
+
+.custom-contact-inner div {
+    width: 100%; /* Adjust width to 100% of the parent container */
+    height: auto; /* Let height adjust according to content */
+    max-width: 502px; /* Set maximum width to 502px */
+    min-height: 325px; /* Set minimum height to 325px */
+    gap: 0px;
+    border-radius: 20px;
+    opacity: 0px;
+    background: #FFFFFF;
+    padding: 43px;
+}
+
+.custom-contact-inner h2{
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27.6px;
+    text-align: left;
+    color: #514E4E;
+   
+}
+
+.custom-contact-inner h3{
+    font-family: Arial;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46px;
+    text-align: left;
+    color: #DD1D21;
+ }
+
+ .custom-contact-inner a{
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27.6px;
+    text-align: left;
+    color: #0A84AA;
+ }
+
+ .help-topic-bottom{
+    padding-top: 101px;
+ }
+
+ .email-link{
+    color:#0A84AA ;
+ }
+
+
+ .contact-number{
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20.7px;
+    text-align: left;
+    color:#ef030f
+
+ }
+
+
+ .howTo-order-accordian .accordion {
+    margin-top: 40px;
+  }
+  
+  .howTo-order-accordian .accordion .card h2 {
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 39.1px;
+    text-align: center;
+    color: #514E4E;
+    background: url(../img/down-arrow.png) no-repeat calc(100% - 22px) center;
+    background-size: 20px;
+}
+
+  .howTo-order-accordian .accordion .card h2.collapsed {
+    background-image: url(../img/up-arrow.png);
+  }
+  
+
+  /* ================== */
+
+  .sign-up-content{
+    background: #FBCE07;
+    padding-top: 58px;
+    padding-bottom: 161px;
+  }
+ 
+  .email-input-section {
+    max-width: 758px;
+    margin: 0 auto;
+   
+}
+.sign-up-content h3{
+    font-family: Arial;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 39.1px;
+    text-align: left;
+    color: #514E4E;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.sign-up-content  p {
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: center;
+    color: #514E4E;
+    margin-bottom: 30px;
+}
+   .sign-up-input-div input::placeholder{
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.4px;
+    text-align: left;
+    color: #979797;
+   
+   }
+ 
+.sign-up-input{
+    min-width: 564px;
+    width:100%;
+    height: 68px;
+    border-radius: 40px;
+    border: 2px 0px 0px 0px;
+    opacity: 0px;
+    background: #FFFFFF;
+    padding-left: 34px;
+    border: 0;
+}
+
+.sign-up-input:focus{
+   outline: 0;
+}
+
+button.sign-up-btn{
+    min-width: 164px;
+    width:100%;
+    height: 68px;
+    border-radius: 40px;
+    background: #DA291C;
+    color: #ffffff;
+    border: 0;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.4px;
+}
+
+/* ========================= */
+
+/* About US CSS */
+
+.aboutUs-container{
+    max-width: 1427px;
+    margin: 0 auto;
+}
+.aboutUs-wrapper .information-wrap.aboutUs-wrap{
+    padding-top: 53px;
+    padding-bottom: 53px;
+}
+
+.aboutUs-wrapper{
+    background: #ffffff;
+}
+.aboutUs-wrapper .information-wrap h3{
+    font-family: Arial;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 39.1px;
+    text-align: center;
+    color: #514E4E;
+}
+
+.about-inner-container{
+    max-width: 1231px;
+    margin: 0 auto;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.aboutUs-wrapper .about-us-text {
+    padding: 42.5px 272.5px;
+    background: #EFEFEF;
+}
+.aboutUs-wrapper .about-us-text h1{
+    font-family: Arial;
+    font-size: 51px;
+    font-weight: 400;
+    line-height: 58.65px;
+    text-align: center;
+    color: #000000;
+}
+
+/* .about-inner-container .about-left{
+    min-width: 768px;
+} */
+.about-inner-container .about-left p{
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18.4px;
+    text-align: left;
+    color: #000000;
+}
+
+.about-right{
+    padding: 10px 0px 0px 10px;
+    background: #F8F9FA;
+    max-width: 415px;
+    height: 179px;
+    margin-left: 48px;
+
+}
+
+.about-right ul{
+    padding-left: 17px;
+}
+
+.about-right ul li{
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18.4px;
+    text-align: left;
+    color: #000000;
+}
+
+
+.about-right h4{
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    text-align: left;
+    color: #7326D9;
+
+}
+
+.aboutUs-bottom-sec{
+    background: #EFEFEF;
+}
+.aboutUs-bottom-sec h5{
+    font-family: Arial;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 43.7px;
+    text-align: left;
+    color: #000000;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+}
+
+.aboutUs-bottom-sec .ourValue-text h6{
+font-family: Arial;
+font-size: 34px;
+font-weight: 400;
+line-height: 39.1px;
+text-align: left;
+color: #7326D9;
+}
+
+.aboutUs-bottom-sec .ourValue-text h6 span{
+    display: block;
+}
+
+.aboutUs-bottom-sec .ourValue-text{
+    padding-right: 53px;
+}
+.aboutUs-bottom-sec .ourValue-text p{
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18.4px;
+    text-align: left;
+    color: #000000;
+}
+
+/* About US CSS Ends */
+
+/* Custome Order page css */
+
+.customerorder-wrap .customOrder-container {
+    max-width: 1514px !important;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 60px;
+}
+ 
+
+
+.customerorder-wrap .information-wrap h1{
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
+
+.customerorder-wrap .customOrder-container h2{
+    font-family: Arial;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36.8px;
+    text-align: left;
+    color: #666666;
+}
+
+.custom-order-div{
+    border-radius: 30px 0px 0px 0px;
+    background: #ffffff;
+    padding: 20px;
+    
+  }
+
+
+  .customOrder-container .custom-order-div button.contact-us-btn {
+    min-width: 108.79px;
+    height: 39.88px;
+    border-radius: 30px;
+    opacity: 0px;
+    background: #FBCE07;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+    border: 0;
+}
+
+.col-wrapper{
+    margin-bottom: 60px;
+ 
+}
+
+  .custom-order-div {
+    min-height: 420px;
+    border-radius: 30px;
+    background: #ffffff;
+    position: relative;
+}
+.custom-order-div .image-div{
+    display: flex;
+    justify-content: center;
+}
+.contact-button-div{
+    display: flex;
+    justify-content: end;
+}
+.contact-us-btn{
+    position: absolute;
+    bottom: 20px;
+}
+
+.custom-order-div .text-div p{
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: left;
+    color: #514E4E;
+
+}
+
+
+
+.custom-inner-image .custom-inner-image{
+text-align: center;
+}

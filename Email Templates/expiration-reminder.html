@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="format-detection" content="telephone=no"> 
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+    <title>Page title</title>
+
+    <style>
+
+        @import url(http://fonts.googleapis.com/css?family=Roboto:300); /*Calling our web font*/
+
+       /* Some resets and issue fixes */
+       #outlook a { padding:0; }
+       body{ width:100% !important; size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; }     
+       .ReadMsgBody { width: 100%; }
+       .ExternalClass {width:100%;} 
+       .backgroundTable {margin:0 auto; padding:0; width:100% !important;} 
+       table td {border-collapse: collapse;}
+       .ExternalClass * {line-height: 115%;}           
+       /* End reset */
+
+
+       /* These are our tablet/medium screen media queries */
+       @media screen and (max-width: 630px){
+
+
+           /* Display block allows us to stack elements */                      
+           *[class="mobile-column"] {display: block;} 
+
+           /* Some more stacking elements */
+           *[class="mob-column"] {float: none !important;width: 100% !important;}     
+
+           /* Hide stuff */
+           *[class="hide"] {display:none !important;}          
+
+           /* This sets elements to 100% width and fixes the height issues too, a god send */
+           *[class="100p"] {width:100% !important; height:auto !important;}                    
+
+           /* For the 2x2 stack */         
+           *[class="condensed"] {padding-bottom:40px !important; display: block;}
+
+           /* Centers content on mobile */
+           *[class="center"] {text-align:center !important; width:100% !important; height:auto !important;}            
+
+           /* 100percent width section with 20px padding */
+           *[class="100pad"] {width:100% !important; padding:20px;} 
+
+           /* 100percent width section with 20px padding left & right */
+           *[class="100padleftright"] {width:100% !important; padding:0 20px 0 20px;} 
+
+           /* 100percent width section with 20px padding top & bottom */
+           *[class="100padtopbottom"] {width:100% !important; padding:20px 0px 20px 0px;} 
+
+       }
+
+   </style>
+
+
+</head>
+
+<body style="padding:0; margin:0">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: auto;" width="100%" class="100p table-1">
+        <tr>
+            <td align="center">
+
+                <table border="0" cellpadding="30" cellspacing="0" style="margin: auto;" width="700" bgcolor="#e4e4e4" class="table-2">
+                    <tr>
+                        <td align="center" valign="top">
+
+                            <table role="presentation" width="700" style="width:700px;" cellpadding="10" cellspacing="0" border="0" align="center" class="table-3" bgcolor="#ffffff" style="background-color: #ffffff;">
+                                <tr>
+                                    <td>
+                                        <img src="https://vitdev.valethi.dev/assets/imgs/logo.png" alt="logo img" width="60">
+                                    </td>
+                                    <td>
+                                        <p style="color: #484848; font-size: 20px;width: 100%;text-align: right;margin: 0;" width="100%" align="right"><font face="'Roboto', Arial, sans-serif"><strong>Expiration Reminder</strong></font></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- <table role="presentation" width="700" style="width:700px;" cellpadding="0" cellspacing="0" border="0" align="center" class="table-3" bgcolor="#ffffff" style="background-color: #ffffff;">    
+                                <tr>
+                                    <td colspan="2">
+                                        <img src="http://localhost/VITPortal/assets/imgs/reminder.png" alt="reminder img" width="30%" style="width: 30%;">
+                                    </td>
+                                </tr>
+                            </table> -->
+
+                            <table width="680" border="0" cellspacing="0" cellpadding="20" bgcolor="#ffffff" class="100p table-4">
+                                <tr>
+                                    <td colspan="3" align="left" style="font-size:16px; color:#848484;"><font face="'Roboto', Arial, sans-serif"><span style="color:#000000;">
+                                        <span style="font-size:16px;">Hi @RECEIVER_NAME,</span></span></font>
+                                        <br>
+                                        <br>
+                                        <font face="'Roboto', Arial, sans-serif"><span style="color:#000000;">
+                                        <span style="font-size:16px;">We wanted to remind you that you have chosen the automatic renewal option for @TYPE. Please find the below details of expiration of @TYPE.</span></span></font>
+                                        <br>
+                                        <br>
+                                        <table width="660" border="1" cellspacing="0" cellpadding="10" bgcolor="#ffffff" class="100p table-5" style="border-color: #cacaca;">
+                                            <thead>
+                                                <tr>
+                                                   <th bgcolor="#c00000" style="color: #ffffff;" align="left"><font face="'Roboto', Arial, sans-serif">Expiration Title</font></th>
+                                                    <th bgcolor="#c00000" style="color: #ffffff;" align="left"><font face="'Roboto', Arial, sans-serif">Expiration Type</font></th>
+                                                    <th bgcolor="#c00000" style="color: #ffffff;" align="center"><font face="'Roboto', Arial, sans-serif">Expiration Date</font></th>
+                                                    <th bgcolor="#c00000" style="color: #ffffff;" align="left"><font face="'Roboto', Arial, sans-serif">Days Left</font></th>
+                                                    <th bgcolor="#c00000" style="color: #ffffff;" align="right"><font face="'Roboto', Arial, sans-serif">Year for Renewal</font></th>
+                                                    <th bgcolor="#c00000" style="color: #ffffff;" align="right"><font face="'Roboto', Arial, sans-serif">Cost in ($)</font></th>
+                                               </tr>
+                                            </thead>
+                                            <tbody>
+                                                  @tbody
+                                            </tbody>
+                                        </table>
+                                        <br>
+                                        <br>
+                                        <font face="'Roboto', Arial, sans-serif"><span style="color:#000000; font-size:24px;">
+                                        <span style="font-size:16px;">If you still want to renew @TYPE, there is no further action required!</span></span></font>
+                                        <br>
+                                        <br>
+                                        <font face="'Roboto', Arial, sans-serif"><span style="color:#000000; font-size:24px;">
+                                        <span style="font-size:16px;">If there is any issue we can help with, please feel free to contact <a href="mailto:vtinfra@valethi.in" style="color:#c34829;">Valethi HelpDesk Team</a>.</span></span></font>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <font face="'Roboto', Arial, sans-serif"><span style="color:#000000; font-size:24px;">
+                                        <span style="font-size:16px;"><strong>Thanks,</strong><br><strong>Valethi IT</strong></span></span></font>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 60px;padding-top: 0;padding-bottom: 0;">
+                                        <img src="https://vitdev.valethi.dev/assets/imgs/logo.png" alt="logo img" width="60">
+                                    </td>
+                                    <td style="border-left: 1px solid #c00000; width: 1px; padding: 0;"></td>
+                                    <td style="padding-top: 0;padding-bottom: 0;">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <font face="'Roboto', Arial, sans-serif">
+                                                            <span style="font-size:14px;">
+                                                                <strong>@Username</strong>
+                                                            </span>
+                                                        </font>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <font face="'Roboto', Arial, sans-serif">
+                                                            <span style="font-size:11px;color: #c00000;">
+                                                                <strong>@Userrole</strong>
+                                                            </span>
+                                                        </font>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3" style="border-bottom: 1px dashed #000000;"> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <font face="'Roboto', Arial, sans-serif">
+                                                            <span style="font-size:11px;text-decoration: underline;">
+                                                                @Useremail
+                                                            </span>
+                                                        </font>
+                                                    </td>
+                                                    <td>
+                                                        <span style="border-left: 1px solid #000000;"></span>
+                                                    </td>
+                                                    <td>
+                                                        <font face="'Roboto', Arial, sans-serif">
+                                                            <span style="font-size:11px;text-decoration: underline;">
+                                                                www.valethi.com
+                                                            </span>
+                                                        </font>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <font face="'Roboto', Arial, sans-serif">
+                                                            <span style="font-size:11px;">
+                                                                @Usernumber
+                                                            </span>
+                                                        </font>
+                                                    </td>
+                                                    <td>
+                                                        <span style="border-left: 1px solid #000000;"></span>
+                                                    </td>
+                                                    <td>
+                                                        <font face="'Roboto', Arial, sans-serif">
+                                                            <span style="font-size:11px;">
+                                                                Nagpur 440022, MH – IN
+                                                            </span>
+                                                        </font>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" height="10" style="height: 10pt;">&nbsp;</td>
+                                </tr>
+                            </table>
+                            
+
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

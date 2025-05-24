@@ -1,0 +1,752 @@
+
+
+
+@media screen and (max-width: 1900px) {
+    .have-question-wrap-div{
+        padding: 0 20px;
+    }
+    .have-question-wrap-div {
+        max-width: 1638px;
+        
+    }
+  }
+
+  @media screen and (max-width: 1626px) {
+    .have-question-wrap-div{
+        padding: 0 20px;
+    }
+    .have-question-wrap-div {
+        max-width: 1638px;
+        
+    }
+    .custom-contact-inner{
+        justify-content: center !important;
+    }
+    .custom-contact-inner h2 {
+        font-size: 23px;
+    }
+    .custom-contact-inner h3 {
+        font-size: 37px;
+    }
+    .custom-contact-inner a {
+        font-size: 22px;
+        line-height: 27.6px;
+    }
+  }
+
+  @media screen and (max-width: 1624px) {
+
+    .custom-contact-inner div {
+        max-width: 440px;
+        min-height: 290px;
+    }
+
+    .custom-contact p {
+        line-height: 25.6px;
+    }
+    
+  }
+
+
+
+  @media screen and (max-width: 1024px) {
+  .information-wrap{
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+    .howTo-order-accordian .card-head {
+        padding-top: 22px !important;
+        padding-bottom: 22px !important;
+    }
+    .howTo-order-accordian .accordion .card h2 {
+        font-size: 28px;
+    }
+
+    /* =====Sign UP======= */
+
+    .sign-up-content h3 {
+        font-size: 31px;
+    }
+    .sign-up-content p {
+        font-size: 18px;
+    }
+    
+    .sign-up-input {
+        min-width: 543px;
+        height: 67px;
+    }
+    button.sign-up-btn {
+        height: 67px;
+    }
+      /* ============ */
+
+  }
+
+  @media screen and (max-width: 991px) {
+    .howTo-order-accordian .card-head {
+        padding-top: 18px !important;
+        padding-bottom: 18px !important;
+    }
+    .howTo-order-accordian .accordion .card h2 {
+        font-size: 26px;
+    }
+    
+    .howTo-order-accordian .card-body {
+     
+        font-size: 15px;
+    }
+    
+  }
+
+    
+  @media screen and (max-width: 800px) {
+      /* ======== */
+
+    .email-input-section {
+        max-width: 730px;
+        margin: 0 auto;
+    }
+    .sign-up-input {
+        min-width: 543px;
+        height: 65px;
+    }
+    button.sign-up-btn {
+        height: 65px;
+    }
+    .sign-up-content h3 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    .sign-up-content p {
+        font-size: 17px;
+    }
+    .sign-up-content {
+       
+        padding-bottom: 120px;
+    }
+    .sign-up-content {
+       
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+  }
+
+  @media screen and (max-width: 768px) {
+    .information-wrap p.title {
+        font-size: 14px;
+    }
+    .information-wrap h1 {
+     
+        font-size: 32px;
+    }
+    .custom-contact-inner div {
+        max-width: 675px;
+        min-height: 280px;
+    }
+    .howTo-order-accordian .accordion .card h2 {
+        font-size: 22px;
+    }
+    .howTo-order-accordian .card-head {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .contact-number {
+        font-size: 16px;
+    }
+
+    /* ============= */
+    .email-input-section {
+        max-width: 704px;
+    }
+
+    .sign-up-input {
+        min-width: 517px;
+        height: 62px;
+    }
+    button.sign-up-btn {
+        height: 62px;
+    }
+    
+    /* .email-input-section {
+        max-width: 638px;
+    } */
+  
+  
+}
+
+@media screen and (max-width: 767px) {
+    .email-input-section {
+        max-width: 630px;
+    }
+    .sign-up-input {
+        min-width: 420px;
+        height: 60px;
+    }
+    button.sign-up-btn {
+        height: 60px;
+    }
+
+}
+
+@media screen and (max-width: 656px) {
+    .sign-up-input-div{
+        display: block !important;
+    }
+    .email-input-section {
+        max-width: 428px;
+    }
+    .sign-up-input {
+      
+        margin-bottom: 25px;
+    }
+    .sign-up-input {
+        min-width: 154px;
+    }
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .information-wrap h1 {
+        font-size: 30px;
+    }
+
+    .custom-contact-inner h2 {
+        font-size: 22px;
+    }
+    .custom-contact-inner h3 {
+        font-size: 34px;
+    }
+    
+    .custom-contact p {
+           font-size: 21px;
+    }
+    
+    .custom-contact-inner a {
+        font-size: 20px;
+        line-height: 25.6px;
+    }
+    .howTo-order-accordian .accordion .card h2 {
+        font-size: 20px;
+    }
+    
+    .howTo-order-accordian .card-head {
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+    }
+
+    .howTo-order-accordian .card-body {
+        font-size: 14px;
+    }
+    .howTo-order-accordian .accordion .card h2 {
+        background-size: 16px;
+    }
+
+    .contact-number {
+        font-size: 14px;
+    }
+
+    /* ============== */
+
+    .sign-up-content h3 {
+        font-size: 25px;
+        
+    }
+    .sign-up-content  p {
+            line-height: 20px;
+    }
+
+      /* ============== */
+}
+
+
+@media screen and (max-width: 420px) {
+
+    .information-wrap{
+        padding: 0 15px;
+    }
+    .information-wrap h1 {
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+    .information-wrap p.title {
+        font-size: 12px;
+        line-height: 16.4px;
+    }
+
+
+    .custom-contact-inner h2 {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    .custom-contact-inner h3 {
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+    
+    .custom-contact p {
+        font-size: 16px;
+        line-height: 22.6px;
+    }
+    
+    .custom-contact-inner a {
+       font-size: 18px;
+    }
+    .custom-contact-inner div {
+      
+        min-height: 215px;
+    }
+    .custom-contact-inner div {
+        padding: 35px;
+    }
+    .howTo-order-accordian .accordion .card h2 {
+        font-size: 18px;
+    }
+    .howTo-order-accordian .card-head {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .howTo-order-accordian .card-body {
+        font-size: 12px;
+        padding-bottom: 20px;
+    }
+
+    .contact-number {
+        font-size: 12px;
+    }
+
+    /* ============= */
+    .sign-up-content {
+        padding-bottom: 90px;
+    }
+    .sign-up-content {
+  
+        padding-top: 50px;
+        padding-bottom: 75px;
+       
+    }
+    .sign-up-content h3 {
+        font-size: 22px;
+    }
+}
+
+
+
+@media screen and (max-width: 376px) {
+    .sign-up-input {
+   
+        height: 57px;
+    }
+    
+    button.sign-up-btn {
+        height: 57px;
+    }
+
+    .sign-up-content p {
+        font-size: 16px;
+    }
+    
+}
+
+@media screen and (max-width: 320px) {
+    .information-wrap h1 {
+        font-size: 20px;
+    }
+    .information-wrap p.title {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .custom-contact-inner h2 {
+        font-size: 18px;
+    }
+    .custom-contact-inner h3 {
+        font-size: 22px;
+    }
+    .custom-contact-inner div {
+        padding: 21px;
+    }
+    .custom-contact-inner a {
+        font-size: 16px;
+    }
+    .custom-contact p {
+        font-size: 14px;
+        line-height: 18.6px;
+    }
+
+    .howTo-order-accordian .accordion .card h2 {
+        font-size: 15px;
+    }
+    .howTo-order-accordian .accordion .card h2 {
+        background-size: 14px;
+    }
+
+    /* =======
+     */
+     .sign-up-content h3 {
+       
+        margin-bottom: 14px;
+    }
+     .sign-up-content  p {
+        line-height: 18px;
+    }
+
+    .sign-up-content {
+        padding-top: 45px;
+        padding-bottom: 57px;
+    }
+}
+
+/* ======About Us Responsive============== */
+
+
+@media screen and (max-width: 1251px) {
+    .about-inner-container {
+        max-width: 1040px;
+    }
+    .aboutUs-wrapper .about-us-text {
+        padding: 42.5px 305.5px;
+       
+    }
+    .aboutUs-wrapper .about-us-text h1 {
+        font-size: 42px;
+        line-height: 43.65px;
+    }
+    .aboutUs-wrapper .information-wrap.aboutUs-wrap {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .aboutUs-bottom-sec h5 {
+        font-size: 31px;
+    }
+    .aboutUs-bottom-sec .ourValue-text h6 {
+        font-size: 30px;
+        line-height: 34.1px;
+    }
+    .aboutUs-bottom-sec .ourValue-text h6 {
+        font-size: 28px;
+        line-height: 30.1px;
+    }
+}   
+
+@media screen and (max-width: 1150px) {
+    .about-inner-container {
+        max-width: 950px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .aboutUs-wrapper .about-us-text h1 {
+        font-size: 38px;
+        line-height: 37.65px;
+    }
+    .aboutUs-bottom-sec .ourValue-text h6 {
+        font-size: 23px;
+        line-height: 24.1px;
+    }
+    .aboutUs-bottom-sec h5 {
+        font-size: 28px;
+    }
+    .aboutUs-bottom-sec h5 {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+   
+    .aboutUs-bottom-sec .ourValue-text {
+        padding-bottom: 20px;
+    }
+    .about-inner-container {
+        padding-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .about-inner-container {
+        max-width: 800px;
+    }
+    .about-right {
+        margin-left: 0;
+    }
+    .about-inner-container{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 25px;
+    }
+    .about-right {
+        padding: 10px 0px 0px 10px;
+        background: #F8F9FA;
+        max-width: 345px;
+        height: 156px;
+        margin-left: 0px;
+    }
+    .aboutUs-wrapper .about-us-text h1 {
+        font-size: 36px;
+        line-height: 35.65px;
+    }
+    .aboutUs-wrapper .about-us-text {
+        padding: 30.5px 200px
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .aboutUs-wrapper .about-us-text h1 {
+        font-size: 31px;
+        line-height: 30.65px;
+    }
+    .aboutUs-wrapper .about-us-text {
+        padding: 30.5px 151px;
+    }
+    .about-inner-container .about-left p 
+    {  font-size: 14px;
+    }
+    .aboutUs-wrapper .information-wrap h3,
+    .aboutUs-wrapper .about-us-text h1 
+     {
+       margin-bottom: 0;
+    }
+    .aboutUs-bottom-sec h5 {
+        font-size: 25px;
+    }
+    .aboutUs-bottom-sec .ourValue-text h6 {
+        font-size: 21px;
+        line-height: 23.1px;
+    }
+
+  
+}
+
+@media screen and (max-width: 576px) {
+    .aboutUs-wrapper .about-us-text h1 {
+        font-size: 28px;
+        line-height: 27.65px;
+    }
+    .aboutUs-wrapper .about-us-text {
+        padding: 30.5px 80px;
+    }
+    .aboutUs-wrapper .information-wrap.aboutUs-wrap {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .aboutUs-wrapper .information-wrap h3 {
+        font-size: 30px;
+    }
+    .about-right h4 {
+        font-size: 18px;
+    }
+    .about-right ul li {
+        font-size: 14px;
+    }
+    .aboutUs-bottom-sec .ourValue-text h6 {
+        font-size: 18px;
+        line-height: 20.1px;
+    }
+    .aboutUs-bottom-sec h5 {
+        padding-top: 20px;
+        
+    }
+     .about-inner-container {
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .aboutUs-wrapper .about-us-text {
+        padding: 16.5px 40px;
+    }
+    .aboutUs-wrapper .about-us-text h1 {
+        font-size: 21px;
+        line-height: 23.65px;
+    }
+    .about-right h4 {
+        font-size: 16px;
+    }
+    .about-right ul li {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .aboutUs-wrapper .information-wrap.aboutUs-wrap {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .aboutUs-wrapper .information-wrap h3 {
+        font-size: 28px;
+    }
+    .aboutUs-bottom-sec .ourValue-text h6 {
+        font-size: 16px;
+        line-height: 18.1px;
+    }
+    .aboutUs-bottom-sec .ourValue-text p {
+        font-size: 14px;
+        line-height: 17.4px;
+    }
+    .aboutUs-bottom-sec h5 {
+        padding-top: 15px;
+    }
+    .aboutUs-bottom-sec h5 {
+        padding-bottom: 15px;
+    }
+    .aboutUs-bottom-sec .ourValue-text {
+        padding-bottom: 15px;
+    }
+    .about-inner-container {
+        padding-bottom: 15px;
+    }
+    .aboutUs-wrapper .information-wrap h3 {
+        font-size: 22px;
+    }
+  
+}
+
+@media screen and (max-width: 320px) {
+    .aboutUs-wrapper .about-us-text h1 {
+        font-size: 17px;
+        line-height: 18.65px;
+    }
+    .aboutUs-wrapper .information-wrap h3 {
+        font-size: 21px;
+    }
+    .aboutUs-wrapper .information-wrap.aboutUs-wrap {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    .about-inner-container .about-left p {
+        font-size: 13px;
+    }
+   
+}
+
+
+
+/* ======Custom Order Responsive============== */
+
+@media screen and (max-width: 1550px) {
+
+    .customerorder-wrap .customOrder-container h2 {
+        font-size: 28px;
+       
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .customerorder-wrap .customOrder-container h2 {
+        font-size: 25px;
+       
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .customerorder-wrap .customOrder-container h2 {
+        font-size: 20px;
+    }
+    .custom-order-div .text-div p {
+        font-size: 14px;
+    }
+    .custom-order-div .text-div p {
+        line-height: 20px;
+    }
+    .col-wrapper {
+        margin-bottom: 40px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .custom-order-div {
+        min-height: 390px;
+        
+    }
+    .customerorder-wrap .customOrder-container h2 {
+        font-size: 18px;
+    }
+    .col-wrapper {
+       margin-bottom: 20px;
+    }
+    .col-wrapper {
+        margin: auto;
+        margin-bottom: 30px
+    }
+    .custom-order-div .text-div p {
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+  
+   .custom-order-div {
+        min-height: 419px;
+    }
+    .customerorder-wrap .customOrder-container {
+        padding-top: 40px;
+    }
+    .custom-order-div .text-div p {
+        line-height: 14px;
+    }
+
+}
+@media screen and (max-width: 420px) {
+    .customerorder-wrap .customOrder-container h2 {
+        font-size: 16px;
+       
+    }
+
+}
+
+@media screen and (max-width: 376px) {
+    .custom-order-div {
+        min-height: 392px;
+    }
+    .custom-order-div .text-div p {
+        line-height: 14px;
+    }
+    .customOrder-container .custom-order-div button.contact-us-btn {
+        min-width: 90.79px;
+        height: 37.88px;
+        font-size: 12px;
+     }
+
+     .custom-order-div {
+        min-height: 359px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    .custom-order-div {
+        min-height: 320px;
+    }
+
+    .customOrder-container .custom-order-div button.contact-us-btn {
+        min-width: 81.79px;
+        height: 35.88px;
+        font-size: 10px;
+    }
+    .customerorder-wrap .customOrder-container {
+        padding: 0 15px;
+    }
+
+    .custom-order-div .text-div p {
+        font-size: 12px;
+    }
+
+    .customOrder-container .custom-order-div button.contact-us-btn {
+        min-width: 75.79px;
+        height: 30.88px;
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+

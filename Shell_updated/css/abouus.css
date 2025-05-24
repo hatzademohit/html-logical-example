@@ -1,0 +1,517 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffffff;
+}
+
+.aboutUs-containernew {
+    max-width: 1456px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-us-text h3 {
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27.6px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000000;
+    padding-top: 50px;
+}
+
+.about-us-text h3 span {
+    color: #de091a;
+}
+
+.about-us-text p {
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20.7px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.about-us-text p span {
+    color: #de091a;
+}
+
+.company-slider {
+    margin-bottom: 30px;
+    padding-inline: 20px;
+    background-color: #efefef;
+}
+.slick-slide img {
+    display: block;
+    height: 88px;
+}
+
+.company-slider .slick-list {
+    background: #efefef;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.slick-next:before, .slick-prev:before {
+    line-height: 0;
+}
+
+.slick-prev.left-arrow-s img, .slick-prev.right-arrow-s img, .slick-next img {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.slick-prev.left-arrow-s img {
+    left: -11px;
+}
+
+.slick-prev.right-arrow-s img {
+    right: 8px !important;
+}
+
+.slick-next img {
+    right: 8px !important;
+}
+
+.slick-prev.slick-arrow, .slick-next.slick-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    z-index: 9;
+}
+
+.slick-prev.slick-arrow {
+    left: 8px;
+}
+
+.slick-next.slick-arrow {
+    right: 8px;
+}
+
+.differ-sec .perfor-sec, .differ-sec .marketing-sec {
+    max-width: 550px;
+    width: 550px;
+    height: 350px;
+}
+
+.differ-sec .perfor-sec {
+    background: #f1e9fb;
+}
+
+.differ-sec .perfor-sec h5, .differ-sec .marketing-sec h5 {
+    font-family: Arial;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32.2px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.differ-sec .perfor-sec h5 {
+    color: #7326D9;
+}
+
+.differ-sec .marketing-sec {
+    background: #fff0e5;
+}
+
+.differ-sec .marketing-sec h5 {
+    color: #FF6B00;
+}
+
+.divider {
+    height: 10px;
+    background: #979797;
+    border-radius: 10px;
+}
+
+.who-we-are-sec {
+    background: #EFEFEF;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.who-we-are-sec h6, .what-we-do-sec h6 {
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27.6px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000000;
+    padding-top: 20px;
+}
+
+.who-we-are-sec p {
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.6px;
+    text-align: center;
+    color: #000000;
+    padding-bottom: 20px;
+    margin-top: 18px;
+}
+
+.what-we-do-img-sec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0 110px;
+    margin-top: 10px;
+}
+
+.what-we-do-img-sec h2, .our-culture-card h4 {
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.what-we-do-img-sec h2 {
+    margin-top: 10px;
+}
+
+.our-culture-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2px;
+    margin-bottom: 50px;
+}
+
+.our-culture-card div {
+    max-width: 180px;
+    width: 180px;
+    height: 80px !important;
+    box-shadow: 4px 4px 4px 0px #0000001A;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.our-culture-card div h4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 5px;
+    }
+
+    .avrage-div {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 20px;
+        background: #efefef;
+        border-radius: 10px;
+        gap: 8px;
+    }
+.avrage-div div{
+    margin-bottom: 10px;
+}
+
+.avrage-div p {
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: center;
+}
+
+.avrage-div h3 {
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27.6px;
+    text-align: center;
+}
+
+.our-mission-text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.our-mission-text h3 span {
+    color: #de091a;
+}
+
+/* -----------------Responsive CSS-----------------------*/
+
+@media screen and (max-width: 1391px) {
+    .differ-sec .perfor-sec, .differ-sec .marketing-sec {
+        max-width: 500px;
+    }
+    .what-we-do-img-sec img{
+        max-width: 90px;
+    }
+}
+
+@media screen and (max-width: 1301px) {
+    .differ-sec .perfor-sec, .differ-sec .marketing-sec {
+        max-width: 460px;
+    }
+   
+}
+
+@media screen and (max-width: 1251px) {
+    .differ-sec .perfor-sec, .differ-sec .marketing-sec {
+        max-width: 430px;
+        height: 300px;
+    }
+
+    .differ-sec .perfor-sec h5, .differ-sec .marketing-sec h5 {
+        font-size: 22px;
+    }
+
+    .differ-sec {
+        gap: 40px;
+    }
+
+    .about-us-text h3 {
+        font-size: 20px;
+        padding-top: 35px;
+    }
+    .who-we-are-sec p {
+        font-size: 16px;
+        line-height: 21.6px;
+    }
+    
+}
+@media screen and (max-width: 1200px) {
+    .what-we-do-img-sec {
+        padding: 0 50px;
+    }
+    .what-we-do-img-sec h2, .our-culture-card h4 {
+        font-size: 18px;
+    }
+    .our-culture-card {
+        justify-content: start;
+        gap: 15px;
+    }
+    .avrage-div p {
+        font-size: 16px;
+       
+    }
+    .avrage-div h3 {
+        font-size: 20px;
+    }
+    .avrage-div h3 {
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 1031px) {
+    .differ-sec .perfor-sec, .differ-sec .marketing-sec {
+        max-width: 380px;
+    }
+
+    .about-us-text h3 {
+        font-size: 18px;
+    }
+    .who-we-are-sec h6, .what-we-do-sec h6 {
+        font-size: 20px;
+    
+}
+}
+@media screen and (max-width: 1031px) {
+    .who-we-are-sec p br {
+        display: none;
+    }
+    .who-we-are-sec p {
+       margin-top: 0px;
+        padding: 10px;
+    }
+    .who-we-are-sec h6, .what-we-do-sec h6 {
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 991.5px) {
+    .what-we-do-img-sec img {
+        max-width: 81px;
+    }
+    .what-we-do-img-sec h2, .our-culture-card h4 {
+        font-size: 16px;
+    }
+    .what-we-do-img-sec {
+        padding: 0 25px;
+        gap: 35px;
+    }
+    .who-we-are-sec h6, .what-we-do-sec h6 {
+        font-size: 18px;
+    }
+    .about-us-text p {
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .about-us-text h3 {
+        font-size: 16px;
+        padding-top: 26px;
+    }
+  
+}
+
+@media screen and (max-width: 768px) {
+    .differ-sec {
+        display: block !important;
+    }
+
+    .differ-sec .perfor-sec, .differ-sec .marketing-sec {
+        max-width: 100%;
+        height: 160px;
+        width: 100%;
+    }
+
+    .admgroup-sec {
+        display: flex;
+        justify-content: center;
+        margin: 15px 0;
+    }
+
+    .about-us-text h3 {
+        line-height: 18.6px;
+    }
+    .what-we-do-img-sec {
+        justify-content: start !important;
+    }
+    .avrage-div {
+        gap:20px;
+        justify-content: start;
+        padding-bottom: 0;
+    }
+    .avrage-div p{
+        margin-bottom: 0;
+        
+    }
+    .our-mission-text h3 {
+        font-size: 16px;
+        padding-top: 30px;
+        line-height: 18px;
+    }
+    .differ-sec .perfor-sec h5, .differ-sec .marketing-sec h5 {
+        font-size: 20px;
+    }
+    .avrage-div h3 {
+        font-size: 16px;
+    }
+   
+}
+@media screen and (max-width: 577px) {
+    .who-we-are-sec p {
+        line-height: 20.6px;
+    }
+    .what-we-do-img-sec img {
+        max-width: 75px;
+    }
+    .what-we-do-img-sec {
+        gap: 30px;
+        padding: 0 5px;
+    }
+    .avrage-div p {
+        font-size: 14px;
+    }
+   
+    .our-culture-card {
+
+        margin-bottom: 30px;
+    }
+    .about-us-text p {
+        font-size: 14px;
+        line-height: 17.7px;
+    }
+    .who-we-are-sec h6, .what-we-do-sec h6 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .about-us-text h3 {
+        padding-top: 23px;
+        font-size: 14px;
+    }
+    .who-we-are-sec p {
+        line-height: 18.6px;
+        font-size: 14px;
+    }
+    .what-we-do-img-sec img {
+        max-width: 57px;
+    }
+    .what-we-do-img-sec h2, .our-culture-card h4 {
+        font-size: 14px;
+    }
+    .avrage-div {
+        gap: 14px;
+    }
+    .avrage-div div{
+        margin-bottom: 0;
+    }
+    .our-mission-text h3 {
+        font-size: 14px;
+       
+    }
+}
+@media screen and (max-width: 414.5px) {
+    .aboutUs-containernew {
+        padding: 0 15px;
+    }
+    .our-culture-card {
+        gap: 10px;
+    }
+}
+@media screen and (max-width: 399.5px) {
+    .our-culture-card div {
+        max-width: 165px;
+      
+    }
+}
+@media screen and (max-width:369.5px) {
+    .our-culture-card div {
+     max-width: 100%;
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 377px) {
+    .what-we-do-img-sec {
+        gap: 21px;
+        
+    }
+    .avrage-div {
+        gap: 18px;
+    }
+   
+   
+}
